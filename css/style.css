@@ -1,79 +1,112 @@
-body {
-    /* background-color: green; */
-    background-image: url(../images/photo.jpeg);
-    padding: 20px;
-}
-
-#welcome {
-    font-size: 50px;
-}
-
-button {
-    margin-top: -20px;
-    /* margin-right: 0px; */
-    margin-left: 5px;
-    line-height: 43px;
-    font-weight: bold;
-    padding: 7px 40px;
-    background: salmon;
-    border: none;
-    border-radius: 50%;
-}
-
-button:hover {
-    background: lightsalmon;
-}
-
-.goButton {
-    border-radius: 0px;
-    padding: 0px 20px;
-}
-
-#start {
-    margin-top: -20px;
-    border-radius: 20px;
-    font-size: 30px;
-    background-color: orange;
-}
-
-.text-box {
-    margin-top: -57px;
-    margin-left: 380px;
-    border-radius: 20px;
-    width: 600px;
-    height: 400px;
-    background-color: gray;
-    border: 3px solid purple;
-    text-align: center;
-}
-
-.question {
-    border-radius: 0px;
-}
-
-.nameBox {
-    /* margin-left: -153px; */
-    margin-top: -20px;
-    width: 150px;
-    height: 25px;
-    font-size: 15px;
-    border: 3px solid black;
-}
-
-.goButton {
-    width: 40px;
-    height: 55px;
-    margin-left: 10px;
-    font-size: 30px;
-}
-
-.answerBox {
-    margin-top: -3px;
-    border-radius: 0px;
-}
-
-
-/* .score {
+    body {
+        /* background-color: green; */
+        background-image: url(../images/photo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+    }
+    
+    #welcome {
+        font-size: 50px;
+    }
+    
+    .welcome {
+        position: relative;
+        background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 4px #f5f5f5;
+        font-size: 200px;
+        font-family: 'Titillium Web', sans-serif;
+        font-style: italic;
+        margin: 0;
+        line-height: 1;
+    }
+    
+    .welcome:before {
+        /* content: 'CHROME'; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+        background-position: -680px 0;
+        /* -webkit-background-clip: text;
+        -webkit-text-stroke: 0;
+        padding-right: 300px;
+        -webkit-animation-name: chrome_effect;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite; */
+    }
+    
+    button {
+        margin-top: 25px;
+        /* margin-right: 0px; */
+        margin-left: 5px;
+        line-height: 43px;
+        font-weight: bold;
+        padding: 7px 40px;
+        background: salmon;
+        border: none;
+        border-radius: 25%;
+    }
+    
+    button:hover {
+        background: lightsalmon;
+    }
+    
+    .goButton {
+        border-radius: 0px;
+        padding: 0px 20px;
+    }
+    
+    #start {
+        margin-top: 35px;
+        border-radius: 20px;
+        font-size: 30px;
+        background-color: #EC9B4E;
+        color: #378DBC;
+        border: 3px solid black;
+    }
+    
+    .text-box {
+        margin-top: -57px;
+        margin-left: 380px;
+        border-radius: 20px;
+        width: 600px;
+        height: 400px;
+        background-color: gray;
+        border: 3px solid purple;
+        text-align: center;
+    }
+    
+    .question {
+        border-radius: 0px;
+    }
+    
+    .nameBox {
+        /* margin-left: -153px; */
+        margin-top: 25px;
+        width: 150px;
+        height: 25px;
+        font-size: 15px;
+        border: 3px solid black;
+    }
+    
+    .goButton {
+        width: 40px;
+        height: 55px;
+        margin-left: 10px;
+        font-size: 30px;
+    }
+    
+    .answerBox {
+        margin-top: -3px;
+        border-radius: 0px;
+    }
+    /* .score {
     width: 300px;
     height: 150px;
     background-color: white;

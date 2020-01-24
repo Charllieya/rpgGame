@@ -98,7 +98,7 @@ function scene3() {
 
     // 1. Create RED button
     var red = document.createElement("button");
-    red.innerHTML = "RED PILL";
+    red.innerHTML = "MUSIC GAME";
     red.style.backgroundColor = 'red'
 
     // 2. Append somewhere
@@ -118,7 +118,7 @@ function scene3() {
 
     // 1. Create BLUE button
     var blue = document.createElement("button");
-    blue.innerHTML = "BLUE PILL";
+    blue.innerHTML = "MOVIE GAME";
     blue.style.backgroundColor = 'blue';
     // 2. Append somewhere
     document.body.appendChild(blue);
@@ -200,6 +200,7 @@ function textboxVariables(answers, question) {
         }
         if (answerCount == 2) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
+            sceneThree();
         }
         if (answerCount == 3) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
@@ -218,7 +219,8 @@ function textboxVariables(answers, question) {
             sceneTwoB();
         }
         if (answerCount == 2) {
-            console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
+            console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.")
+            sceneThreeB();
         }
         if (answerCount == 3) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
@@ -406,7 +408,7 @@ function sceneOneB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        document.body.style.backgroundImage = "url(countyside.jpg)";
+        document.body.style.backgroundImage = "url(countyside.jpeg)";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -417,6 +419,7 @@ function sceneTwo() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -436,16 +439,41 @@ function sceneTwoB() {
     });
 }
 
-function sceneBlueone() {
-    question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
-    document.body.style.backgroundImage = "url(muesum.jpg)";
+function sceneThree() {
+    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points , but gang 1 star for giving them a useful idea.";
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerOne.style.display = 'inline';
+        answerTwo.style.display = 'inline';
+    });
+}
+
+function sceneThreeB() {
+    question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
-    // answerOne.style.display = 'block';
 }
+
+// function sceneBlueone() {
+//     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
+//     document.body.style.backgroundImage = "url(muesum.jpg)";
+//     document.body.style.backgroundRepeat = "no-repeat";
+//     document.body.style.backgroundSize = "cover";
+//     answerOne.style.display = 'none';
+//     answerTwo.style.display = 'none';
+//     nextButton.addEventListener("click", function() {
+//         answerOne.style.display = 'inline';
+//         answerTwo.style.display = 'inline';
+//     });
+//     // answerOne.style.display = 'block';
+//
