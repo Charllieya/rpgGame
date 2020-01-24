@@ -174,6 +174,7 @@ function textboxVariables(answers, question) {
         }
         if (answerCount == 1) {
             console.log("We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.");
+            sceneTwo();
         }
         if (answerCount == 2) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
@@ -188,9 +189,11 @@ function textboxVariables(answers, question) {
     answerTwo.addEventListener("click", function() {
         if (answerCount == 0) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
+            sceneOneB();
         }
         if (answerCount == 1) {
             console.log("Deniece Williams wins every time and we are definitely cheering this boy on. Sean manages to stay on key the entire song. You just earned your  20points. ");
+            sceneTwoB();
         }
         if (answerCount == 2) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
@@ -282,16 +285,17 @@ function red() {
 
         // Updates the question when the 'next' button is clicked.
         question.innerText = questions[answerCount];
+        answers.innerText = questions[answerCount];
     });
-    homeButton.addEventListener("click", function() {
-        begin();
-    });
+    // homeButton.addEventListener("click", function() {
+    //     begin();
+    // });
 }
 
 function blue() {
-    let questions = ['Charllieya , Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
+    let questions = ['brother , Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
         'As you are walking home, you see Kevin Bacon trying to teach Sean Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Sean on beat. Do you choose:',
-        'Red Three: ',
+        'You are tired of being a Good Samaritan. You decide not to help anyone else but you have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Darryl arguing with Run ',
         'Red Four: ',
         'Red Five: '
     ];
@@ -351,9 +355,9 @@ function blue() {
         // Updates the question when the 'next' button is clicked.
         question.innerText = questions[answerCount];
     });
-    homeButton.addEventListener("click", function() {
-        begin();
-    });
+    // homeButton.addEventListener("click", function() {
+    //     begin();
+    // });
 }
 /*****************************************************************************************************************************************************************/
 
@@ -361,7 +365,7 @@ var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 
 function sceneOne() {
-    question.innerText = 'A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
+    question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
@@ -369,4 +373,35 @@ function sceneOne() {
         answerTwo.style.display = 'inline';
     });
     // answerOne.style.display = 'block';
+}
+
+
+function sceneOneB() {
+    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points. ';
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        answerOne.style.display = 'inline';
+        answerTwo.style.display = 'inline';
+    });
+}
+
+function sceneTwo() {
+    question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        answerOne.style.display = 'inline';
+        answerTwo.style.display = 'inline';
+    });
+}
+
+function sceneTwoB() {
+    question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Sean manages to stay on key the entire song. You just earned your  20points. ';
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        answerOne.style.display = 'inline';
+        answerTwo.style.display = 'inline';
+    });
 }

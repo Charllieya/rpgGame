@@ -37,10 +37,14 @@ button:hover {
 }
 
 .text-box {
-    margin-top: -20px;
+    margin-top: -57px;
+    margin-left: 380px;
+    border-radius: 20px;
     width: 600px;
-    height: 550px;
-    background-color: white;
+    height: 400px;
+    background-color: gray;
+    border: 3px solid red;
+    text-align: center;
 }
 
 .question {
@@ -64,6 +68,6 @@ button:hover {
 }
 
 .answerBox {
-    margin-top: 20px;
+    margin-top: -3px;
     border-radius: 0px;
 }
