@@ -1,0 +1,69 @@
+body {
+    /* background-color: green; */
+    background-image: url(../images/photo.jpeg);
+    padding: 20px;
+}
+
+#welcome {
+    font-size: 50px;
+}
+
+button {
+    margin-top: -20px;
+    /* margin-right: 0px; */
+    margin-left: 5px;
+    line-height: 43px;
+    font-weight: bold;
+    padding: 7px 40px;
+    background: salmon;
+    border: none;
+    border-radius: 50%;
+}
+
+button:hover {
+    background: lightsalmon;
+}
+
+.goButton {
+    border-radius: 0px;
+    padding: 0px 20px;
+}
+
+#start {
+    margin-top: -20px;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: orange;
+}
+
+.text-box {
+    margin-top: -20px;
+    width: 600px;
+    height: 550px;
+    background-color: white;
+}
+
+.question {
+    border-radius: 0px;
+}
+
+.nameBox {
+    /* margin-left: -153px; */
+    margin-top: -20px;
+    width: 150px;
+    height: 25px;
+    font-size: 15px;
+    border: 3px solid black;
+}
+
+.goButton {
+    width: 40px;
+    height: 55px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.answerBox {
+    margin-top: 20px;
+    border-radius: 0px;
+}
