@@ -1,5 +1,9 @@
 var textbox = document.getElementById("textbox");
-
+var scoreBoard = document.getElementById("scoreboard");
+var answerOne = document.getElementById('answer1');
+var answerTwo = document.getElementById('answer2');
+var answerThree = document.getElementById('answer3');
+var answerFour = document.getElementById('answer4');
 // Create Text Box for the player's name. Then set the id of the Text Box to "playerName"
 var playerName = document.createElement("input");
 playerName.setAttribute("id", "playerName");
@@ -14,23 +18,26 @@ var goButton = document.createElement("input");
 var answerCount = 0;
 // Create Welcome Header
 var welcome = document.getElementById('welcome');
-welcome.innerText = 'CHOOSE YOUR DESTINY!';
+welcome.innerText = 'A BLAST TO THE PAST: 80s Edition';
 welcome.style.color = 'white';
 textbox.style.display = "none";
+scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
 
 
 function begin() {
-    welcome.innerText = 'CHOOSE YOUR DESTINY!';
+    welcome.innerText = 'A BLAST TO THE PAST: 80s Edition';
     welcome.style.visibility = 'visible';
     textbox.style.display = "none";
+    scoreBoard.style.display = "none";
     start.style.display = 'block';
 }
 
 // Function begins when the "Start" button is pressed.
 function startGame() {
     textbox.style.display = "none";
+    scoreBoard.style.display = "none";
     // Create the "type" attribute for "playerName", and attribute to "text".
     playerName.setAttribute("type", "text");
     // Create the "value" attribute for "playerName", and attribute to "".
@@ -53,6 +60,7 @@ function startGame() {
 // Function begins when the "GO" button is clicked.
 goButton.onclick = function letGo() {
     textbox.style.display = "none";
+    scoreBoard.style.display = "none";
     // Reads the text in the text box and store it in a variable.
     player = document.getElementById("playerName").value;
     // Set innerHTML to the value that's in the text box.
@@ -73,6 +81,7 @@ function playerNameCheck() {
         playerName.setAttribute("type", "hidden"); //HIDES TEXT BOX.
         goButton.setAttribute("type", "hidden"); // HIDES GO BUTTON
         textbox.style.display = "none";
+        scoreBoard.style.display = "none";
     } else {
         alert('Please enter name');
     }
@@ -83,16 +92,18 @@ function scene3() {
     // var back = document.getElementById('back');
     var choice = document.getElementById('choice'); //text for choicing red or blue pill.
     var welcome = document.getElementById('welcome'); //welcome text.
-    welcome.innerText = 'Choose Your Pill:';
+    welcome.innerText = 'Choose Your ADVENTURE:';
 
     //CREATING THE RED AND BLUE PILL BUTTONS
 
     // 1. Create RED button
     var red = document.createElement("button");
     red.innerHTML = "RED PILL";
-    red.style.backgroundColor = 'red';
+    red.style.backgroundColor = 'red'
+
     // 2. Append somewhere
     document.body.appendChild(red);
+
     // 3. Add event handler
     red.addEventListener("click", function() {
         console.log("welcome");
@@ -100,6 +111,7 @@ function scene3() {
         blue.style.display = 'none';
         choice.innerText = player + ', you have choosen: THE RED PILL';
         textbox.style.display = "none";
+        scoreBoard.style.display = "none";
         redPill();
 
     });
@@ -117,6 +129,7 @@ function scene3() {
         red.style.display = 'none';
         choice.innerText = player + ', you have choosen: THE BLUE PILL';
         textbox.style.display = "none";
+        scoreBoard.style.display = "none";
         bluePill();
 
     });
@@ -127,7 +140,13 @@ function redPill() {
     console.log(player + " You have choosen the red pill.");
     welcome.innerText = '';
     textbox.style.display = "block";
+    scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
+    document.body.style.backgroundImage = "url(living.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "1500px 1000px";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
     red();
     // textboxVariables();
 }
@@ -140,8 +159,11 @@ function bluePill() {
     console.log(player + " You have choosen the blue pill.");
     welcome.innerText = '';
     textbox.style.display = "block";
+    scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
     //question.innerText = 'THIS IS A QUESTION';
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
     blue();
     //textboxVariables();
 }
@@ -155,14 +177,14 @@ function textboxVariables(answers, question) {
     // Declare answer variable
     var answerOne = document.getElementById('answer1');
     var answerTwo = document.getElementById('answer2');
-    // var answerThree = document.getElementById('answer3');
-    // var answerFour = document.getElementById('answer4');
+    var answerThree = document.getElementById('answer3');
+    var answerFour = document.getElementById('answer4');
 
     // Set the innerHTML to the answers for the current scenario
     answerOne.innerHTML = answers.answerOne;
     answerTwo.innerHTML = answers.answerTwo;
-    // answerThree.innerHTML = answers.answerThree;
-    // answerFour.innerHTML = answers.answerFour;
+    answerThree.innerHTML = answers.answerThree;
+    answerFour.innerHTML = answers.answerFour;
 
     // Add 'clicking' to the answers
     answerOne.addEventListener("click", function() {
@@ -205,28 +227,27 @@ function textboxVariables(answers, question) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
         }
     });
-    // answerThree.addEventListener("click", function() {
-    //     if (question == "Red Three: ") {
-    //         console.log("Success!");
-    //     } else {
-    //         console.log("Wrong Answer!");
-    //     }
-    // });
-    // answerFour.addEventListener("click", function() {
-    //     if (question == "Red Four: ") {
-    //         console.log("Success!");
-    //     } else {
-    //         console.log("Wrong Answer!");
-    //     }
-    // });
+    answerThree.addEventListener("click", function() {
+        if (answerCount == 0) {
+            console.log("Success!");
+            sceneBlueone();
+        }
+    });
+    answerFour.addEventListener("click", function() {
+        if (question == "Red Four: ") {
+            console.log("Success!");
+        } else {
+            console.log("Wrong Answer!");
+        }
+    });
 }
 //FUNCTION TO START THE GAME FOR THE RED PIll
 
 function red() {
     // An array of all the questions.
     let questions = [player + ', Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
-        'As you are walking home, you see Kevin Bacon trying to teach Sean Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Sean on beat. Do you choose:',
-        'Red Three: ',
+        'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
+        'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Blair Underwood arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'Red Four: ',
         'Red Five: '
     ];
@@ -240,36 +261,36 @@ function red() {
         {
             answerOne: 'Old Time Rock and Roll',
             answerTwo: 'Back in black.',
-            // answerThree: 'RED ONE PILL ANSWER THREE',
-            // answerFour: 'RED ONE PILL ANSWER FOUR'
+            answerThree: 'RED ONE PILL ANSWER THREE',
+            answerFour: 'RED ONE PILL ANSWER FOUR'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
             answerOne: 'Ain’t nobody.',
             answerTwo: 'Let’s hear it for the Boy',
-            // answerThree: 'RED TWO PILL ANSWER THREE',
-            // answerFour: 'RED TWO PILL ANSWER FOUR'
+            answerThree: 'RED TWO PILL ANSWER THREE',
+            answerFour: 'RED TWO PILL ANSWER FOUR'
         },
         // Index 2 of the array. Contains the third set of answer choices.
         {
-            answerOne: 'RED THREE PILL ANSWER ONE',
-            answerTwo: 'RED THREE PILL ANSWER TWO',
-            // answerThree: 'RED THREE PILL ANSWER THREE',
-            // answerFour: 'RED THREE PILL ANSWER FOUR'
+            answerOne: "It's Tricky",
+            answerTwo: "It's Like That",
+            answerThree: 'RED THREE PILL ANSWER THREE',
+            answerFour: 'RED THREE PILL ANSWER FOUR'
         },
         // Index 3 of the array. Contains the fourth set of answer choices.
         {
             answerOne: 'RED FOUR PILL ANSWER ONE',
             answerTwo: 'RED FOUR PILL ANSWER TWO',
-            // answerThree: 'RED FOUR PILL ANSWER THREE',
-            // answerFour: 'RED FOUR PILL ANSWER FOUR'
+            answerThree: 'RED FOUR PILL ANSWER THREE',
+            answerFour: 'RED FOUR PILL ANSWER FOUR'
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
         {
             answerOne: 'RED FIVE PILL ANSWER ONE',
             answerTwo: 'RED FIVE PILL ANSWER TWO',
-            // answerThree: 'RED FIVE PILL ANSWER THREE',
-            // answerFour: 'RED FIVE PILL ANSWER FOUR'
+            answerThree: 'RED FIVE PILL ANSWER THREE',
+            answerFour: 'RED FIVE PILL ANSWER FOUR'
         }
     ];
 
@@ -295,7 +316,7 @@ function red() {
 function blue() {
     let questions = ['brother , Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
         'As you are walking home, you see Kevin Bacon trying to teach Sean Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Sean on beat. Do you choose:',
-        'You are tired of being a Good Samaritan. You decide not to help anyone else but you have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Darryl arguing with Run ',
+        'You are tired of being a Good Samaritan. You decide not to help anyone else but you have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Darryl arguing with Run  ',
         'Red Four: ',
         'Red Five: '
     ];
@@ -307,38 +328,38 @@ function blue() {
     answers = [
         // Index 0 of the array. Contains the first set of answer choices.
         {
-            answerOne: 'Old Time Rock and Roll',
-            answerTwo: 'Back in black.',
-            // answerThree: 'RED ONE PILL ANSWER THREE',
-            // answerFour: 'RED ONE PILL ANSWER FOUR'
+            // answerOne: 'Old Time Rock and Roll',
+            // answerTwo: 'Back in black.',
+            answerThree: 'RED ONE PILL ANSWER THREE',
+            answerFour: 'RED ONE PILL ANSWER FOUR'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
-            answerOne: 'Ain’t nobody.',
-            answerTwo: 'Let’s hear it for the Boy',
-            // answerThree: 'RED TWO PILL ANSWER THREE',
-            // answerFour: 'RED TWO PILL ANSWER FOUR'
+            // answerOne: 'Ain’t nobody.',
+            // answerTwo: 'Let’s hear it for the Boy',
+            answerThree: 'RED TWO PILL ANSWER THREE',
+            answerFour: 'RED TWO PILL ANSWER FOUR'
         },
         // Index 2 of the array. Contains the third set of answer choices.
         {
-            answerOne: 'RED THREE PILL ANSWER ONE',
-            answerTwo: 'RED THREE PILL ANSWER TWO',
-            // answerThree: 'RED THREE PILL ANSWER THREE',
-            // answerFour: 'RED THREE PILL ANSWER FOUR'
+            // answerOne: 'RED THREE PILL ANSWER ONE',
+            // answerTwo: 'RED THREE PILL ANSWER TWO',
+            answerThree: 'RED THREE PILL ANSWER THREE',
+            answerFour: 'RED THREE PILL ANSWER FOUR'
         },
         // Index 3 of the array. Contains the fourth set of answer choices.
         {
-            answerOne: 'RED FOUR PILL ANSWER ONE',
-            answerTwo: 'RED FOUR PILL ANSWER TWO',
-            // answerThree: 'RED FOUR PILL ANSWER THREE',
-            // answerFour: 'RED FOUR PILL ANSWER FOUR'
+            // answerOne: 'RED FOUR PILL ANSWER ONE',
+            // answerTwo: 'RED FOUR PILL ANSWER TWO',
+            answerThree: 'RED FOUR PILL ANSWER THREE',
+            answerFour: 'RED FOUR PILL ANSWER FOUR'
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
         {
             answerOne: 'RED FIVE PILL ANSWER ONE',
             answerTwo: 'RED FIVE PILL ANSWER TWO',
-            // answerThree: 'RED FIVE PILL ANSWER THREE',
-            // answerFour: 'RED FIVE PILL ANSWER FOUR'
+            answerThree: 'RED FIVE PILL ANSWER THREE',
+            answerFour: 'RED FIVE PILL ANSWER FOUR'
         }
     ];
 
@@ -366,9 +387,13 @@ var answerTwo = document.getElementById('answer2');
 
 function sceneOne() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
+    document.body.style.backgroundImage = "url(business.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(countyside.jpeg)";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -381,13 +406,14 @@ function sceneOneB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(countyside.jpg)";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
 }
 
 function sceneTwo() {
-    question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
+    question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Chris just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
@@ -397,11 +423,29 @@ function sceneTwo() {
 }
 
 function sceneTwoB() {
-    question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Sean manages to stay on key the entire song. You just earned your  20points. ';
+    question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Chris manages to stay on key the entire song. You just earned your  20points. ';
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerOne.style.display = 'none';
+    answerTwo.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerOne.style.display = 'inline';
+        answerTwo.style.display = 'inline';
+    });
+}
+
+function sceneBlueone() {
+    question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
+    document.body.style.backgroundImage = "url(muesum.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
+    // answerOne.style.display = 'block';
 }
