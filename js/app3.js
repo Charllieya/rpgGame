@@ -236,7 +236,7 @@ function textboxVariables(answers, question) {
         }
     });
     answerFour.addEventListener("click", function() {
-        if (question == "Red Four: ") {
+        if (answerCount == "Red Four: ") {
             console.log("Success!");
         } else {
             console.log("Wrong Answer!");
