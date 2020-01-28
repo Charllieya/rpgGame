@@ -46,6 +46,7 @@
         /* margin-right: 0px; */
         margin-left: 5px;
         line-height: 43px;
+        font: 15px;
         font-weight: bold;
         padding: 7px 40px;
         background: salmon;
@@ -56,10 +57,6 @@
     button:hover {
         background: lightsalmon;
     }
-    /* .goButton {
-        border-radius: 0px;
-        padding: 0px 20px;
-    } */
     
     #start {
         margin-top: 35px;
@@ -93,12 +90,6 @@
         font-size: 15px;
         border: 3px solid black;
     }
-    /* .goButton {
-        width: 40px;
-        height: 55px;
-        margin-left: 10px;
-        font-size: 30px;
-    } */
     
     .answerBox {
         margin-top: -3px;

@@ -418,8 +418,8 @@ function blue() {
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
         {
-            answerOne: 'RED FIVE PILL ANSWER ONE',
-            answerTwo: 'RED FIVE PILL ANSWER TWO',
+            // answerOne: 'RED FIVE PILL ANSWER ONE',
+            // answerTwo: 'RED FIVE PILL ANSWER TWO',
             answerThree: 'RED FIVE PILL ANSWER THREE',
             answerFour: 'RED FIVE PILL ANSWER FOUR'
         }
