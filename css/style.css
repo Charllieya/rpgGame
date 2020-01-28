@@ -50,7 +50,7 @@
         padding: 7px 40px;
         background: salmon;
         border: none;
-        border-radius: 0;
+        border-radius: 50px;
     }
     
     button:hover {
@@ -112,10 +112,3 @@
         margin-left: 245px;
         border-radius: 0px;
     }
-    /* .score {
-    width: 300px;
-    height: 150px;
-    background-color: white;
-    margin-left: 1000px;
-    margin-top: -120px;
-} */
