@@ -50,7 +50,7 @@
         padding: 7px 40px;
         background: salmon;
         border: none;
-        border-radius: 25%;
+        border-radius: 0;
     }
     
     button:hover {
@@ -104,6 +104,12 @@
     
     .answerBox {
         margin-top: -3px;
+        border-radius: 0px;
+    }
+    
+    .nextBox {
+        margin-top: -15px;
+        margin-left: 245px;
         border-radius: 0px;
     }
     /* .score {
