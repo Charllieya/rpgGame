@@ -193,47 +193,50 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
             nextButton.style.display = 'block';
-            sceneOne();
+            redA();
         }
         if (answerCount == 1) {
             console.log("We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.");
             nextButton.style.display = 'block';
-            sceneTwo();
+            redB();
         }
         if (answerCount == 2) {
             console.log("Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points , but gang 1 star for giving them a useful idea.");
             nextButton.style.display = 'block';
-            sceneThree();
+            redC();
         }
         if (answerCount == 3) {
             console.log("You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.");
             nextButton.style.display = 'block';
-            sceneFour();
+            redD();
         }
         if (answerCount == 4) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
-            nextButton.style.display = 'block';
+            // nextButton.style.display = 'block';
+            nextButton.style.display = 'none';
+            answerOne.style.display = 'none';
+            answerTwo.style.display = 'none';
         }
     });
     answerTwo.addEventListener("click", function() {
         if (answerCount == 0) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
             nextButton.style.display = 'block';
-            sceneOneB();
+            redA2();
         }
         if (answerCount == 1) {
             console.log("Deniece Williams wins every time and we are definitely cheering this boy on. Sean manages to stay on key the entire song. You just earned your  20points. ");
-            sceneTwoB();
+            redB2();
         }
         if (answerCount == 2) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
             nextButton.style.display = 'block';
-            sceneThreeB();
+            redC2();
         }
         if (answerCount == 3) {
             console.log("You chose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ");
             nextButton.style.display = 'block';
-            sceneFourB();
+            redD2();
         }
         if (answerCount == 4) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
@@ -245,22 +248,67 @@ function textboxVariables(answers, question) {
     answerThree.addEventListener("click", function() {
         if (answerCount == 0) {
             console.log("Success!");
-            sceneBlueone();
+            blueA();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 1) {
+            console.log("Success!");
+            blueB();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 2) {
+            console.log("Success!");
+            blueC();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 3) {
+            console.log("Success!");
+            blueD();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 4) {
+            console.log("Success!");
+            nextButton.style.display = 'none';
+            answerOne.style.display = 'none';
+            answerTwo.style.display = 'none';
+            // sceneBlueone();
         }
     });
     answerFour.addEventListener("click", function() {
-        if (answerCount == "Red Four: ") {
+        if (answerCount == 0) {
             console.log("Success!");
-        } else {
-            console.log("Wrong Answer!");
+            blueA2();
+            nextButton.style.display = 'block';
         }
+        if (answerCount == 1) {
+            console.log("Success!");
+            blueB2();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 2) {
+            console.log("Success!");
+            blueC2();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 3) {
+            console.log("Success!");
+            blueD2();
+            nextButton.style.display = 'block';
+        }
+        if (answerCount == 4) {
+            console.log("Success!");
+            nextButton.style.display = 'none';
+            answerOne.style.display = 'none';
+            answerTwo.style.display = 'none';
+        }
+
     });
 }
 //FUNCTION TO START THE GAME FOR THE RED PIll
 
 function red() {
     // An array of all the questions.
-    let questions = [player + ', Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
+    let questions = [player + ', Tom Cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
         'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
         'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Blair Underwood arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
@@ -329,11 +377,11 @@ function red() {
 }
 /*****************************************************************************BLUE GAME*********************************************************************** */
 function blue() {
-    let questions = ['brother , Tom cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
-        'As you are walking home, you see Kevin Bacon trying to teach Sean Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Sean on beat. Do you choose:',
-        'You are tired of being a Good Samaritan. You decide not to help anyone else but you have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Darryl arguing with Run  ',
-        'Red Four: ',
-        'Red Five: '
+    let questions = ['BLUE SCENE QUESTION ONE',
+        'BLUE SCENE QUESTION TWO',
+        'BLUE SCENE QUESTION THREE',
+        'BLUE SCENE QUESTION FOUR',
+        'BLUE SCENE QUESTION FIVE'
     ];
 
     // Set the question's innerText to the value of the current index. (If you're on the third set of answers, set the question to the question 3, which is 'Red Three').
@@ -379,7 +427,7 @@ function blue() {
 
     // Calls the function to create the text boxes. Passes the array of questions and the array of obecjts for the answers (so they don't have to be global variables).
     textboxVariables(answers[answerCount], questions[answerCount]);
-
+    nextButton.style.display = 'none';
     // Adds 'clicking' to the 'next' button. Goes to the next set of questions/answers.
     nextButton.addEventListener("click", function() {
         // Increases the current answer choice set by 1 (If you're on answer set 2, it increments by 1, so you can move on to answer set 3).
@@ -399,7 +447,7 @@ function blue() {
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 
-function sceneOne() {
+function redA() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
     document.body.style.backgroundImage = "url(business.jpg)";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -415,7 +463,7 @@ function sceneOne() {
     // answerOne.style.display = 'block';
 }
 
-function sceneOneB() {
+function redA2() {
     question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points. ';
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -427,7 +475,7 @@ function sceneOneB() {
     });
 }
 
-function sceneTwo() {
+function redB() {
     question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Chris just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -439,7 +487,7 @@ function sceneTwo() {
     });
 }
 
-function sceneTwoB() {
+function redB2() {
     question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Chris manages to stay on key the entire song. You just earned your  20 points. ';
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -455,7 +503,7 @@ function sceneTwoB() {
     });
 }
 
-function sceneThree() {
+function redC() {
     question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points.";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -467,7 +515,7 @@ function sceneThree() {
     });
 }
 
-function sceneThreeB() {
+function redC2() {
     question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -482,7 +530,7 @@ function sceneThreeB() {
     });
 }
 
-function sceneFour() {
+function redD() {
     question.innerText = "You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
@@ -490,25 +538,140 @@ function sceneFour() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        nextButton.style.display = 'none';
+        nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
-        // answerOne.style.display = 'inline';
-        // answerTwo.style.display = 'inline';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerOne.style.display = 'none';
+        answerTwo.style.display = 'none';
     });
 }
 
-function sceneFourB() {
-    question.innerText = "You chose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
+function redD2() {
+    question.innerText = "You choose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        nextButton.style.display = 'none';
+        nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
-        // answerOne.style.display = 'inline';
-        // answerTwo.style.display = 'inline';
+        answerOne.style.display = 'none';
+        answerTwo.style.display = 'none';
     });
 }
 /********************************************************************************************************************************************************************** */
+
+function blueA() {
+    question.innerText = 'BLUE MOVIE ANSWER ONE';
+    document.body.style.backgroundImage = "url(business.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        nextButton.style.display = 'none';
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+    // answerOne.style.display = 'block';
+}
+
+function blueA2() {
+    question.innerText = 'BLUE ALTERNATE ANSWER ONE';
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'none';
+        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+}
+
+function blueB() {
+    question.innerText = 'BLUE MOVIE ANSWER TWO';
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'none';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+}
+
+function blueB2() {
+    question.innerText = 'BLUE ALTERNATE ANSWER TWO ';
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.style.display = 'block';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'none';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+}
+
+function blueC() {
+    question.innerText = "BLUE MOVIE ANSWER THREE";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'none';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+}
+
+function blueC2() {
+    question.innerText = "BLUE ALTERNATE ANSWER THREE";
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'none';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'inline';
+        answerFour.style.display = 'inline';
+    });
+}
+
+function blueD() {
+    question.innerText = "BLUE MOVIE ANSWER FOUR";
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'block';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'none';
+        answerFour.style.display = 'none';
+    });
+}
+
+function blueD2() {
+    question.innerText = "BLUE ALTERNATE ANSWER FOUR ";
+    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    answerThree.style.display = 'none';
+    answerFour.style.display = 'none';
+    nextButton.addEventListener("click", function() {
+        nextButton.style.display = 'block';
+        document.body.style.backgroundImage = "url(bar.jpeg)";
+        answerThree.style.display = 'none';
+        answerFour.style.display = 'none';
+    });
+}
