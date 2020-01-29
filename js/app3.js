@@ -27,7 +27,7 @@ choice.style.display = 'none';
 
 
 function begin() {
-    welcome.innerText = 'A BLAST TO THE PAST: 80s Edition';
+    welcome.innerText = 'A BLAST TO THE PAST: 20th Century';
     welcome.style.visibility = 'visible';
     textbox.style.display = "none";
     scoreBoard.style.display = "none";
@@ -504,7 +504,7 @@ function redB2() {
 }
 
 function redC() {
-    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points.";
+    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points!.";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
