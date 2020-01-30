@@ -1,5 +1,7 @@
 var textbox = document.getElementById("textbox");
 var scoreBoard = document.getElementById("scoreboard");
+var point = 0;
+var points = document.getElementById("points");
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 var answerThree = document.getElementById('answer3');
@@ -142,6 +144,8 @@ function redPill() {
     textbox.style.display = "block";
     scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
+    point = 250;
+    points.innerText = point;
     document.body.style.backgroundImage = "url(living.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "1500px 1000px";
@@ -161,12 +165,15 @@ function bluePill() {
     textbox.style.display = "block";
     scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
+    point = 300;
+    points.innerText = point;
     // question.innerText = 'Welcome. You have just chosen the MOVIE PILL. ' + player + " You meet Marty McFly and he tells you that ";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     blue();
     //textboxVariables();
 }
+
 
 //SCENE FOUR
 //DECLARING TEXT BOX QUESTION AND ANSWER BOXES.
@@ -455,6 +462,8 @@ function redA() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 250 + 20;
+        points.innerText = point;
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         nextButton.style.display = 'none';
         answerOne.style.display = 'inline';
@@ -464,10 +473,12 @@ function redA() {
 }
 
 function redA2() {
-    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points. ';
+    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose 10 points. ';
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 250 - 10;
+        points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         answerOne.style.display = 'inline';
@@ -480,6 +491,8 @@ function redB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 240 - 15;
+        points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
@@ -496,6 +509,8 @@ function redB2() {
     answerTwo.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
+        point = 270 + 20;
+        points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
@@ -508,6 +523,8 @@ function redC() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 225 - 10;
+        points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
@@ -523,6 +540,8 @@ function redC2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 290 + 15;
+        points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'inline';
@@ -538,6 +557,8 @@ function redD() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 215 - 15;
+        points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -554,6 +575,8 @@ function redD2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        point = 305 + 25;
+        points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
