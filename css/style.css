@@ -101,3 +101,11 @@
         margin-left: 245px;
         border-radius: 0px;
     }
+    
+    .score {
+        margin-top: -28px;
+        width: 100%;
+        /* top: 0px; */
+        background: rgb(72, 72, 72);
+        height: 50px;
+    }
