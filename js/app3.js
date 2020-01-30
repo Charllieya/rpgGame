@@ -200,11 +200,13 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
             nextButton.style.display = 'block';
+            point = point + 20;
             redA();
         }
         if (answerCount == 1) {
             console.log("We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.");
             nextButton.style.display = 'block';
+            point = point - 15;
             redB();
         }
         if (answerCount == 2) {
@@ -477,7 +479,7 @@ function redA2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 250 - 10;
+        // point = 250 - 10;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(countyside.jpeg)";
@@ -491,7 +493,7 @@ function redB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 240 - 15;
+        // point = 240 - 15;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -509,7 +511,7 @@ function redB2() {
     answerTwo.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
-        point = 270 + 20;
+        // point = 270 + 20;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -523,7 +525,7 @@ function redC() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 225 - 10;
+        // point = 225 - 10;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -540,7 +542,7 @@ function redC2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 290 + 15;
+        // point = 290 + 15;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -557,7 +559,7 @@ function redD() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 215 - 15;
+        // point = 215 - 15;
         points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -575,7 +577,7 @@ function redD2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 305 + 25;
+        // point = 305 + 25;
         points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
