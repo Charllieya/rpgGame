@@ -20,6 +20,8 @@ var goButton = document.createElement("input");
 var answerCount = 0;
 // Create Welcome Header
 var welcome = document.getElementById('welcome');
+// Array of flase values
+var flagArray = [false, false, false, false, false];
 welcome.innerText = 'A BLAST TO THE PAST: 80s Edition';
 welcome.style.color = 'white';
 textbox.style.display = "none";
@@ -195,36 +197,56 @@ function textboxVariables(answers, question) {
 
     // Add 'clicking' to the answers
     answerOne.addEventListener("click", function() {
-        point = 250;
         // console.log("Test: " + question);
         //If the current question is equal to "Red One: ", then the first answer choice is correct.
         if (answerCount == 0) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
             nextButton.style.display = 'block';
-            point = 250 + 20;
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point += 20;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redA();
         }
         if (answerCount == 1) {
             console.log("We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.");
             nextButton.style.display = 'block';
-            point = 270 - 15;
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point -= 15;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redB();
         }
         if (answerCount == 2) {
             console.log("Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points , but gang 1 star for giving them a useful idea.");
             nextButton.style.display = 'block';
-            point = 255 - 10;
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point -= 10;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redC();
         }
         if (answerCount == 3) {
             console.log("You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.");
             nextButton.style.display = 'block';
-            // point = point - 15;
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point -= 15;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redD();
         }
         if (answerCount == 4) {
-            console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
+            console.log("LAST ONE.");
             // nextButton.style.display = 'block';
+            // If the first index is false, update the score
+            // if (!flagArray[answerCount])
+            //     point += 20;
+            // // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            // flagArray[answerCount] = true;
             nextButton.style.display = 'none';
             answerOne.style.display = 'none';
             answerTwo.style.display = 'none';
@@ -234,31 +256,51 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
             nextButton.style.display = 'block';
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point -= 10;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redA2();
         }
         if (answerCount == 1) {
             console.log("Deniece Williams wins every time and we are definitely cheering this boy on. Sean manages to stay on key the entire song. You just earned your  20points. ");
+            nextButton.style.display = 'block';
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point += 20;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redB2();
         }
         if (answerCount == 2) {
-            console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
+            console.log("Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.");
             nextButton.style.display = 'block';
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point += 15;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redC2();
         }
         if (answerCount == 3) {
             console.log("You chose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ");
             nextButton.style.display = 'block';
+            // If the first index is false, update the score
+            if (!flagArray[answerCount])
+                point += 25;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             redD2();
         }
         if (answerCount == 4) {
-            console.log("You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose ten points.");
+            console.log("LAST ONE!");
             nextButton.style.display = 'none';
             answerOne.style.display = 'none';
             answerTwo.style.display = 'none';
         }
     });
     answerThree.addEventListener("click", function() {
-        point = 250;
         if (answerCount == 0) {
             console.log("Success!");
             blueA();
@@ -325,7 +367,7 @@ function red() {
         'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
         'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Blair Underwood arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
-        'You have finally made it to the teleporter, and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
+        player + ', you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
     ];
 
     // Set the question's innerText to the value of the current index. (If you're on the third set of answers, set the question to the question 3, which is 'Red Three').
@@ -497,7 +539,6 @@ function redB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 240 - 15;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
