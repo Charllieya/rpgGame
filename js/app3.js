@@ -107,6 +107,7 @@ function scene3() {
     red.style.backgroundColor = '#EC9B4E'
         // 2. Append somewhere
     document.body.appendChild(red);
+    red.className = 'travelButton';
     // 3. Add event handler
     red.addEventListener("click", function() {
         console.log("welcome");
@@ -124,6 +125,7 @@ function scene3() {
     blue.style.backgroundColor = '#EC9B4E';
     // 2. Append somewhere
     document.body.appendChild(blue);
+    blue.className = 'travelButton';
     // 3. Add event handler
     blue.addEventListener("click", function() {
         console.log("welcome");
@@ -139,12 +141,12 @@ function scene3() {
 //FUNCTIONS CREATED FOR EACH STORY. 
 
 function redPill() {
-    scene.innerHTML = 'RED PILL';
+    scene.innerHTML = 'BLAST TO THE PAST';
     console.log(player + " You have choosen the red pill.");
     welcome.innerText = '';
     header.innerText = '';
     textbox.style.display = "block";
-    scoreBoard.style.display = "inline-block";
+    scoreBoard.style.display = "block";
     choice.style.display = 'none';
     point = 250;
     points.innerText = point;
@@ -159,12 +161,12 @@ function redPill() {
 
 //FUNCTION TO START THE GAME FOR THE BLUE PILL
 function bluePill() {
-    scene.innerHTML = 'BLUE PILL';
+    scene.innerHTML = 'BLAST TO THE PAST';
     console.log(player + " You have Choosen to take the DeLorean back to the 20th Century");
     welcome.innerText = '';
     header.innerText = '';
     textbox.style.display = "block";
-    scoreBoard.style.display = "inline-block";
+    scoreBoard.style.display = "block";
     choice.style.display = 'none';
     point = 300;
     points.innerText = point;
