@@ -1,6 +1,6 @@
 var textbox = document.getElementById("textbox");
 var scoreBoard = document.getElementById("scoreboard");
-var point = 0;
+var point;
 var points = document.getElementById("points");
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
@@ -195,28 +195,31 @@ function textboxVariables(answers, question) {
 
     // Add 'clicking' to the answers
     answerOne.addEventListener("click", function() {
+        point = 250;
         // console.log("Test: " + question);
         //If the current question is equal to "Red One: ", then the first answer choice is correct.
         if (answerCount == 0) {
             console.log("A. Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right.");
             nextButton.style.display = 'block';
-            point = point + 20;
+            point = 250 + 20;
             redA();
         }
         if (answerCount == 1) {
             console.log("We all love a good Chaka vibe, but this wasn’t one of those times. Sean just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.");
             nextButton.style.display = 'block';
-            point = point - 15;
+            point = 270 - 15;
             redB();
         }
         if (answerCount == 2) {
             console.log("Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points , but gang 1 star for giving them a useful idea.");
             nextButton.style.display = 'block';
+            point = 255 - 10;
             redC();
         }
         if (answerCount == 3) {
             console.log("You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.");
             nextButton.style.display = 'block';
+            // point = point - 15;
             redD();
         }
         if (answerCount == 4) {
@@ -255,6 +258,7 @@ function textboxVariables(answers, question) {
         }
     });
     answerThree.addEventListener("click", function() {
+        point = 250;
         if (answerCount == 0) {
             console.log("Success!");
             blueA();
@@ -464,7 +468,7 @@ function redA() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        point = 250 + 20;
+        // point = 250 + 20;
         points.innerText = point;
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         nextButton.style.display = 'none';
