@@ -1,13 +1,14 @@
     body {
-        /* background-color: green; */
-        background-image: url(../images/photo.jpg);
+        background-image: url(../images/timeTravel.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 20px;
     }
     
     #welcome {
-        font-size: 50px;
+        font-size: 100px;
+        border: 3px solid white;
+        text-align: center;
     }
     
     .welcome {
@@ -31,6 +32,7 @@
         z-index: 10;
         background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
         background-position: -680px 0;
+        background-color: #32120E;
         /* -webkit-background-clip: text;
         -webkit-text-stroke: 0;
         padding-right: 300px;
@@ -41,17 +43,23 @@
         -webkit-animation-iteration-count: infinite; */
     }
     
+    .header {
+        margin-top: 40px;
+        /* background-color: #EC9B4E; */
+        -webkit-text-stroke: 1px #fff;
+        font-size: 75px;
+        color: #32120E;
+        text-align: center;
+    }
+    
     button {
-        margin-top: 25px;
-        /* margin-right: 0px; */
-        margin-left: 5px;
-        line-height: 43px;
+        margin-top: -4px;
+        margin-left: 341px;
+        line-height: 40px;
         font: 15px;
         font-weight: bold;
         padding: 7px 40px;
-        background: salmon;
-        border: none;
-        border-radius: 50px;
+        border: 2px solid #fff;
     }
     
     button:hover {
@@ -59,23 +67,22 @@
     }
     
     #start {
-        margin-top: 35px;
+        margin-top: -32px;
         border-radius: 20px;
         font-size: 30px;
         background-color: #EC9B4E;
         color: #378DBC;
-        border: 3px solid black;
+        border: 3px solid white;
     }
     
     .text-box {
         margin-top: 20px;
         margin-left: 380px;
-        /* border-radius: 15px; */
         width: 600px;
         height: 400px;
         background-color: rgb(46, 46, 46);
-        border: 20px solid rgb(8, 12, 121);
-        border-top: 50px solid rgb(8, 12, 121);
+        border: 11px solid rgb(8, 12, 121);
+        border-top: 30px solid rgb(8, 12, 121);
         text-align: center;
     }
     
@@ -88,8 +95,8 @@
     }
     
     .nameBox {
-        /* margin-left: -153px; */
-        margin-top: 25px;
+        margin-top: -61px;
+        margin-left: 517px;
         width: 150px;
         height: 25px;
         font-size: 15px;

@@ -20,24 +20,25 @@ var goButton = document.createElement("input");
 var answerCount = 0;
 // Create Welcome Header
 var welcome = document.getElementById('welcome');
+var header = document.getElementById('header');
 // Array of flase values
 var flagArray = [false, false, false, false, false];
-welcome.innerText = 'A BLAST TO THE PAST: 80s Edition';
-welcome.style.color = 'white';
+welcome.innerText = 'A BLAST TO THE PAST';
+// welcome.style.color = 'white';
 textbox.style.display = "none";
 scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
-
+/************************************************************************************************************************************************************************ */
 
 function begin() {
-    welcome.innerText = 'A BLAST TO THE PAST: 20th Century';
+    welcome.innerText = 'A BLAST TO THE PAST';
     welcome.style.visibility = 'visible';
     textbox.style.display = "none";
     scoreBoard.style.display = "none";
     start.style.display = 'block';
 }
-
+/************************************************************************************************************************************************************************ */
 // Function begins when the "Start" button is pressed.
 function startGame() {
     textbox.style.display = "none";
@@ -58,9 +59,10 @@ function startGame() {
     goButton.className = 'goButton';
     // Remove the start button
     start.style.display = 'none';
-    welcome.innerText = 'PLAYER, ENTER YOUR NAME: ';
+    welcome.style.display = 'none';
+    header.innerText = 'TRAVELER, ENTER YOUR NAME: ';
 }
-
+/************************************************************************************************************************************************************************ */
 // Function begins when the "GO" button is clicked.
 goButton.onclick = function letGo() {
     textbox.style.display = "none";
@@ -77,7 +79,6 @@ goButton.onclick = function letGo() {
 
 }
 
-
 function playerNameCheck() {
     if (playerName.value != '') {
         console.log("Success!");
@@ -91,39 +92,36 @@ function playerNameCheck() {
     }
 }
 
-
+/************************************************************************************************************************************************************************ */
 function scene3() {
     // var back = document.getElementById('back');
     var choice = document.getElementById('choice'); //text for choicing red or blue pill.
     var welcome = document.getElementById('welcome'); //welcome text.
-    welcome.innerText = 'Choose Your ADVENTURE:';
+    header.innerText = 'TIME TRAVEL OPTION:';
 
     //CREATING THE RED AND BLUE PILL BUTTONS
 
     // 1. Create RED button
     var red = document.createElement("button");
-    red.innerHTML = "MUSIC GAME";
-    red.style.backgroundColor = 'red'
-
-    // 2. Append somewhere
+    red.innerHTML = "PHOTOBOOTH";
+    red.style.backgroundColor = '#EC9B4E'
+        // 2. Append somewhere
     document.body.appendChild(red);
-
     // 3. Add event handler
     red.addEventListener("click", function() {
         console.log("welcome");
         red.style.display = 'none';
         blue.style.display = 'none';
-        choice.innerText = player + ', you have choosen: THE RED PILL';
+        // choice.innerText = player + ', you have choosen: THE RED PILL';
         textbox.style.display = "none";
         scoreBoard.style.display = "none";
         redPill();
-
     });
 
     // 1. Create BLUE button
     var blue = document.createElement("button");
-    blue.innerHTML = "MOVIE GAME";
-    blue.style.backgroundColor = 'blue';
+    blue.innerHTML = "DELOREAN";
+    blue.style.backgroundColor = '#EC9B4E';
     // 2. Append somewhere
     document.body.appendChild(blue);
     // 3. Add event handler
@@ -131,18 +129,20 @@ function scene3() {
         console.log("welcome");
         blue.style.display = 'none';
         red.style.display = 'none';
-        choice.innerText = player + ', you have choosen: THE BLUE PILL';
+        // choice.innerText = player + ', you have choosen: THE BLUE PILL';
         textbox.style.display = "none";
         scoreBoard.style.display = "none";
         bluePill();
-
     });
 }
+/************************************************************************************************************************************************************************ */
+//FUNCTIONS CREATED FOR EACH STORY. 
 
 function redPill() {
     scene.innerHTML = 'RED PILL';
     console.log(player + " You have choosen the red pill.");
     welcome.innerText = '';
+    header.innerText = '';
     textbox.style.display = "block";
     scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
@@ -157,13 +157,12 @@ function redPill() {
     // textboxVariables();
 }
 
-
-
 //FUNCTION TO START THE GAME FOR THE BLUE PILL
 function bluePill() {
     scene.innerHTML = 'BLUE PILL';
-    console.log(player + " You have choosen the blue pill.");
+    console.log(player + " You have Choosen to take the DeLorean back to the 20th Century");
     welcome.innerText = '';
+    header.innerText = '';
     textbox.style.display = "block";
     scoreBoard.style.display = "inline-block";
     choice.style.display = 'none';
@@ -175,8 +174,7 @@ function bluePill() {
     blue();
     //textboxVariables();
 }
-
-
+/************************************************************************************************************************************************************************ */
 //SCENE FOUR
 //DECLARING TEXT BOX QUESTION AND ANSWER BOXES.
 function textboxVariables(answers, question) {
@@ -510,7 +508,6 @@ function redA() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 250 + 20;
         points.innerText = point;
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         nextButton.style.display = 'none';
@@ -525,7 +522,6 @@ function redA2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 250 - 10;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(countyside.jpeg)";
@@ -556,7 +552,6 @@ function redB2() {
     answerTwo.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
-        // point = 270 + 20;
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -604,7 +599,6 @@ function redD() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 215 - 15;
         points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -622,7 +616,6 @@ function redD2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 305 + 25;
         points.innerText = point;
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
