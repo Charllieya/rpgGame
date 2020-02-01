@@ -51,6 +51,7 @@
         font-size: 75px;
         color: #32120E;
         text-align: center;
+        /* border: 3px solid white; */
     }
     
     #start {
@@ -129,7 +130,7 @@
     
     .nextBox {
         margin-top: -15px;
-        margin-left: 245px;
+        margin-left: 223px;
         line-height: 40px;
         border-radius: 0px;
         padding: 7px 40px;

@@ -1,7 +1,10 @@
 var textbox = document.getElementById("textbox");
+var introBox = document.getElementById("introBox");
+var intro = document.getElementById('intro');
 var scoreBoard = document.getElementById("scoreboard");
 var point;
 var points = document.getElementById("points");
+
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 var answerThree = document.getElementById('answer3');
@@ -12,6 +15,7 @@ playerName.setAttribute("id", "playerName");
 var player;
 let answers;
 var nextButton = document.getElementById('next');
+var proceedButton = document.getElementById('proceed');
 // var backButton = document.getElementById('back');
 var homeButton = document.getElementById('home');
 // Create Go Button
@@ -26,6 +30,7 @@ var flagArray = [false, false, false, false, false];
 welcome.innerText = 'A BLAST TO THE PAST';
 // welcome.style.color = 'white';
 textbox.style.display = "none";
+introBox.style.display = "none";
 scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
@@ -35,6 +40,7 @@ function begin() {
     welcome.innerText = 'A BLAST TO THE PAST';
     welcome.style.visibility = 'visible';
     textbox.style.display = "none";
+    introBox.style.display = "none";
     scoreBoard.style.display = "none";
     start.style.display = 'block';
 }
@@ -42,6 +48,7 @@ function begin() {
 // Function begins when the "Start" button is pressed.
 function startGame() {
     textbox.style.display = "none";
+    introBox.style.display = "none";
     scoreBoard.style.display = "none";
     // Create the "type" attribute for "playerName", and attribute to "text".
     playerName.setAttribute("type", "text");
@@ -66,6 +73,7 @@ function startGame() {
 // Function begins when the "GO" button is clicked.
 goButton.onclick = function letGo() {
     textbox.style.display = "none";
+    introBox.style.display = "none";
     scoreBoard.style.display = "none";
     // Reads the text in the text box and store it in a variable.
     player = document.getElementById("playerName").value;
@@ -82,22 +90,60 @@ goButton.onclick = function letGo() {
 function playerNameCheck() {
     if (playerName.value != '') {
         console.log("Success!");
-        scene3();
+        // scene3();
+        // scene2();
+        introScene();
         playerName.setAttribute("type", "hidden"); //HIDES TEXT BOX.
         goButton.setAttribute("type", "hidden"); // HIDES GO BUTTON
-        textbox.style.display = "none";
+        // textbox.style.display = "block";
+        introBox.style.display = "block";
         scoreBoard.style.display = "none";
     } else {
         alert('Please enter name');
     }
 }
 
+function introScene() {
+    introBox.style.display = "block";
+    header.innerText = ' ';
+    document.body.style.backgroundImage = "url(attic.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    // document.body.style.backgroundSize = "1500px 1000px";
+    intro.innerText = 'Hello ' + player + '. You have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "The BEST of the 80s." '
+    proceedButton.addEventListener("click", function() {
+        introScene2();
+    });
+}
+
+function introScene2() {
+    introBox.style.display = "block";
+    intro.innerText = 'As you open the time capsule, you are zapped into a dark room. A voice speaks: "You have awaken me. As your punishment, you must travel back in time and correct problems. In order to get back to the present time. You must collect 350 gems. If you collect 350 gems, I will reward you with a gift, as well as let you come home. If you do not, you will be stucked in the past for 20 years."  '
+    proceedButton.addEventListener("click", function() {
+        introChoice();
+    });
+}
+
+function introChoice() {
+    introBox.style.display = "block";
+    header.innerText = ' ';
+    document.body.style.backgroundImage = "url(attic.jpg)";
+    document.body.style.backgroundRepeat = "no-repeat";
+    // document.body.style.backgroundSize = "1500px 1000px";
+    intro.innerText = player + ', you are granted the option to travel in two different time machines. A phonebooth, and the DoLorean. How will you travel? ';
+    proceedButton.addEventListener("click", function() {
+        introBox.style.display = "none";
+        scene3();
+    });
+}
+
 /************************************************************************************************************************************************************************ */
 function scene3() {
+
     // var back = document.getElementById('back');
     var choice = document.getElementById('choice'); //text for choicing red or blue pill.
     var welcome = document.getElementById('welcome'); //welcome text.
     header.innerText = 'TIME TRAVEL OPTION:';
+    // introBox.style.display = "none";
 
     //CREATING THE RED AND BLUE PILL BUTTONS
 
@@ -115,6 +161,7 @@ function scene3() {
         blue.style.display = 'none';
         // choice.innerText = player + ', you have choosen: THE RED PILL';
         textbox.style.display = "none";
+        introBox.style.display = "none";
         scoreBoard.style.display = "none";
         redPill();
     });
@@ -133,6 +180,7 @@ function scene3() {
         red.style.display = 'none';
         // choice.innerText = player + ', you have choosen: THE BLUE PILL';
         textbox.style.display = "none";
+        introBox.style.display = "none";
         scoreBoard.style.display = "none";
         bluePill();
     });
@@ -146,6 +194,7 @@ function redPill() {
     welcome.innerText = '';
     header.innerText = '';
     textbox.style.display = "block";
+    introBox.style.display = "none";
     scoreBoard.style.display = "block";
     choice.style.display = 'none';
     point = 250;
@@ -166,6 +215,7 @@ function bluePill() {
     welcome.innerText = '';
     header.innerText = '';
     textbox.style.display = "block";
+    introBox.style.display = "none";
     scoreBoard.style.display = "block";
     choice.style.display = 'none';
     point = 300;
