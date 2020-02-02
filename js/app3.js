@@ -552,6 +552,34 @@ function blue() {
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 
+// function sleep(milliseconds) {
+//     const date = Date.now();
+//     let currentDate = null;
+//     do {
+//         currentDate = Date.now();
+//     } while (currentDate - date < milliseconds);
+// }
+
+function addPoints(currentPoints, endPoints) {
+    // If you're adding numbers to the current points..
+    if (endPoints > currentPoints) {
+        // Increment the currentPoints by one, until it equals the endPoints
+        for (var i = currentPoints; i <= endPoints; i++) {
+            console.log("Current Points: " + i);
+            points.innerText = i;
+            //sleep(50);
+        }
+        // Else, if you're subtracting from the currentPoints..    
+    } else {
+        // Decrement the currentPoints by one, until it equals the endPoints
+        for (var i = currentPoints; i >= endPoints; i--) {
+            console.log("Current Points: " + i);
+            points.innerText = i;
+            //sleep(50);
+        }
+    }
+}
+
 function redA() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
     document.body.style.backgroundImage = "url(business.jpg)";
@@ -560,7 +588,9 @@ function redA() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        points.innerText = point;
+        addPoints(points.innerText, point);
+        //points.innerText = point;
+
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         nextButton.style.display = 'none';
         answerOne.style.display = 'inline';
@@ -574,6 +604,7 @@ function redA2() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(countyside.jpeg)";
@@ -587,6 +618,7 @@ function redB() {
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -604,6 +636,7 @@ function redB2() {
     answerTwo.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
@@ -628,7 +661,7 @@ function redC() {
 
 function redC2() {
     question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundImage = "url(openBar.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
@@ -662,7 +695,7 @@ function redD() {
 
 function redD2() {
     question.innerText = "You choose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundImage = "url(ballroom.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
