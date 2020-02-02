@@ -1,8 +1,9 @@
     body {
+        /* width: 100%;
+        height: auto; */
         background-image: url(../images/timeTravel.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 20px;
     }
     
     #welcome {
@@ -10,6 +11,11 @@
         font-size: 100px;
         border: 3px solid white;
         text-align: center;
+    }
+    
+    .img-responsive {
+        width: 100%;
+        height: auto;
     }
     
     .welcome {
@@ -95,13 +101,16 @@
     }
     
     .text-box {
-        margin-top: 20px;
-        margin-left: 380px;
-        width: 600px;
-        height: 400px;
-        background-color: rgb(46, 46, 46);
-        border: 11px solid rgb(8, 12, 121);
         border-top: 30px solid rgb(8, 12, 121);
+        margin-top: 225px;
+        margin-left: 32px;
+        margin-right: 128px;
+        height: auto;
+        /* background-color: rgb(46, 46, 46); */
+        /* 
+        border-top: 10px solid rgb(8, 12, 121); */
+        border: 3px solid rgb(91, 91, 99);
+        background-color: rgba(255, 98, 0, 0.407);
         text-align: center;
     }
     
@@ -131,6 +140,16 @@
     .nextBox {
         margin-top: -15px;
         margin-left: 223px;
+        line-height: 40px;
+        border-radius: 0px;
+        padding: 7px 40px;
+        background-color: gray;
+        border: 2px solid rgb(8, 12, 121);
+    }
+    
+    .proceedBox {
+        margin-top: 17px;
+        margin-left: 20px;
         line-height: 40px;
         border-radius: 0px;
         padding: 7px 40px;

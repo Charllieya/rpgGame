@@ -106,9 +106,7 @@ function playerNameCheck() {
 function introScene() {
     introBox.style.display = "block";
     header.innerText = ' ';
-    document.body.style.backgroundImage = "url(attic.jpg)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    // document.body.style.backgroundSize = "1500px 1000px";
+    document.body.style.backgroundImage = "url('images/attic.jpg')";
     intro.innerText = 'Hello ' + player + '. You have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "The BEST of the 80s." '
     proceedButton.addEventListener("click", function() {
         introScene2();
@@ -126,9 +124,6 @@ function introScene2() {
 function introChoice() {
     introBox.style.display = "block";
     header.innerText = ' ';
-    document.body.style.backgroundImage = "url(attic.jpg)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    // document.body.style.backgroundSize = "1500px 1000px";
     intro.innerText = player + ', you are granted the option to travel in two different time machines. A phonebooth, and the DoLorean. How will you travel? ';
     proceedButton.addEventListener("click", function() {
         introBox.style.display = "none";
@@ -199,9 +194,9 @@ function redPill() {
     choice.style.display = 'none';
     point = 250;
     points.innerText = point;
-    document.body.style.backgroundImage = "url(living.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "1500px 1000px";
+    document.body.style.backgroundImage = "url('images/den.jpeg')";
+    document.body.style.backgroundSize = "cover";
+    // document.body.style.backgroundPosition = "fixed";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     red();
@@ -582,16 +577,15 @@ function addPoints(currentPoints, endPoints) {
 
 function redA() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
-    document.body.style.backgroundImage = "url(business.jpg)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
+
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
         //points.innerText = point;
-
-        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        document.body.style.backgroundImage = "url('images/living.jpeg')";
+        // document.body.style.backgroundSize = "auto";
+        document.body.style.backgroundPosition = "center";
         nextButton.style.display = 'none';
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
@@ -607,7 +601,9 @@ function redA2() {
         addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        document.body.style.backgroundImage = "url('images/barn.jpeg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -629,9 +625,7 @@ function redB() {
 
 function redB2() {
     question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Chris manages to stay on key the entire song. You just earned your  20 points. ';
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.style.display = 'block';
@@ -639,7 +633,8 @@ function redB2() {
         addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
+        document.body.style.backgroundImage = "url('images/gameroom.jpeg')";
+        document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -653,7 +648,7 @@ function redC() {
         // point = 225 - 10;
         points.innerText = point;
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
+        // document.body.style.backgroundImage = "url('images/gameroom.jpg')";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -671,6 +666,7 @@ function redC2() {
         points.innerText = point;
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
+        document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -679,7 +675,6 @@ function redC2() {
 function redD() {
     question.innerText = "You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
