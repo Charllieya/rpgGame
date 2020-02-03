@@ -45,7 +45,7 @@
  .header {
      margin-top: 40px;
      /* background-color: #EC9B4E; */
-     -webkit-text-stroke: 1px #fff;
+     -webkit-text-stroke: 4px #fff;
      font-size: 75px;
      color: #32120E;
      text-align: center;
@@ -121,7 +121,7 @@
  
  .nameBox {
      margin-top: -61px;
-     margin-left: 517px;
+     margin-left: 626px;
      width: 150px;
      height: 25px;
      font-size: 15px;
@@ -144,6 +144,7 @@
      line-height: 40px;
      border-radius: 0px;
      padding: 7px 40px;
+     font-weight: bold;
      background-color: gray;
      border: 2px solid rgb(8, 12, 121);
  }
