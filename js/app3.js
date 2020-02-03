@@ -106,7 +106,7 @@ function introScene() {
 
 function introScene2() {
     introBox.style.display = "block";
-    intro.innerText = 'As you open the time capsule, you are zapped into a dark room. A voice speaks: "You have awaken me. As your punishment, you must travel back in time and correct problems. In order to get back to the present time. You must collect 350 gems. If you collect 350 gems, I will reward you with a gift, as well as let you come home. If you do not, you will be stucked in the past for 20 years."  '
+    intro.innerText = 'As you open the time capsule, you are zapped into a dark room. A voice speaks: "You have awaken me. As your punishment, you must travel back in time and correct problems. In order to get back to the present time. You must collect 300 gems. If you collect 350 gems, I will reward you with a gift, as well as let you come home. If you do not, you will be stucked in the past for 20 years."  '
     proceedButton.addEventListener("click", function() {
         introChoice();
     });
@@ -175,8 +175,8 @@ function scene3() {
 //FUNCTIONS CREATED FOR EACH STORY. 
 
 function redPill() {
-    scene.innerHTML = 'BLAST TO THE PAST';
-    console.log(player + " You have choosen the red pill.");
+    scene.innerHTML = 'You have Choosen to take the phonebooth back to the 20th Century';
+    console.log(player + "You have Choosen to take the DeLorean back to the 20th Century");
     welcome.innerText = '';
     header.innerText = '';
     textbox.style.display = "block";
@@ -196,7 +196,7 @@ function redPill() {
 
 //FUNCTION TO START THE GAME FOR THE BLUE PILL
 function bluePill() {
-    scene.innerHTML = 'BLAST TO THE PAST';
+    scene.innerText = 'You have Choosen to take the DeLorean back to the 20th Century';
     console.log(player + " You have Choosen to take the DeLorean back to the 20th Century");
     welcome.innerText = '';
     header.innerText = '';
@@ -568,13 +568,15 @@ function addPoints(currentPoints, endPoints) {
 
 function redA() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
-
+    document.body.style.backgroundImage = "url('images/living.jpeg')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
         //points.innerText = point;
-        document.body.style.backgroundImage = "url('images/living.jpeg')";
+        document.body.style.backgroundImage = "url('images/barn.jpeg')";
         // document.body.style.backgroundSize = "auto";
         document.body.style.backgroundPosition = "center";
         nextButton.style.display = 'none';
@@ -586,6 +588,7 @@ function redA() {
 
 function redA2() {
     question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose 10 points. ';
+    document.body.style.backgroundImage = "url('images/living.jpeg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
@@ -602,13 +605,15 @@ function redA2() {
 
 function redB() {
     question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Chris just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
+    document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
+        document.body.style.backgroundImage = "url('images/gameroom.jpeg')";
+        document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -633,13 +638,18 @@ function redB2() {
 
 function redC() {
     question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points!.";
+    document.body.style.backgroundImage = "url('images/openBar.jpeg')";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 225 - 10;
+        addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
-        // document.body.style.backgroundImage = "url('images/gameroom.jpg')";
+        document.body.style.backgroundImage = "url('images/countyside.jpeg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
     });
@@ -647,16 +657,17 @@ function redC() {
 
 function redC2() {
     question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
-    document.body.style.backgroundImage = "url(openBar.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/openBar.jpeg')";
+    document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
-        // point = 290 + 15;
+        addPoints(points.innerText, point);
         points.innerText = point;
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
+        document.body.style.backgroundImage = "url('images/countyside.jpeg')";
+        document.body.style.backgroundPosition = "center";
         document.body.style.backgroundSize = "cover";
         answerOne.style.display = 'inline';
         answerTwo.style.display = 'inline';
@@ -665,32 +676,36 @@ function redC2() {
 
 function redD() {
     question.innerText = "You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
+    document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
+    document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         points.innerText = point;
+        document.body.style.backgroundImage = "url('images/phonebooth.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'block';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
-        winRed();
+        winStatement();
     });
 }
 
 function redD2() {
     question.innerText = "You choose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
-    document.body.style.backgroundImage = "url(ballroom.jpeg)";
+    document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         points.innerText = point;
+        document.body.style.backgroundImage = "url('images/phonebooth.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'block';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
         winStatement();
@@ -711,18 +726,17 @@ function winRed() {
     if (point >= 300) {
         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
         nextButton.addEventListener("click", function() {
-            nextButton.innerText = 'Start Over';
+            nextButton.innerText = 'START OVER';
             theEnd();
         });
 
     }
     if (point < 300) {
         console.log(point + "jj");
-        nextButton.innerText = 'START OVER';
-
-        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home. However, thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two....";
+        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
         nextButton.addEventListener("click", function() {
-            location.reload();
+            nextButton.innerText = 'START OVER';
+            theEnd();
         });
     }
 }
@@ -749,7 +763,6 @@ function blueA() {
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
-    // answerOne.style.display = 'block';
 }
 
 function blueA2() {
