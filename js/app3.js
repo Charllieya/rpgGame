@@ -4,7 +4,6 @@ var intro = document.getElementById('intro');
 var scoreBoard = document.getElementById("scoreboard");
 var point;
 var points = document.getElementById("points");
-
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 var answerThree = document.getElementById('answer3');
@@ -16,8 +15,6 @@ var player;
 let answers;
 var nextButton = document.getElementById('next');
 var proceedButton = document.getElementById('proceed');
-// var backButton = document.getElementById('back');
-// var homeButton = document.getElementById('home');
 // Create Go Button
 var goButton = document.createElement("input");
 // Counter for answers
@@ -34,8 +31,7 @@ introBox.style.display = "none";
 scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
-/************************************************************************************************************************************************************************ */
-/************************************************************************************************************************************************************************ */
+/******************************************************************************************************************************************************************/
 // Function begins when the "Start" button is pressed.
 function startGame() {
     textbox.style.display = "none";
@@ -60,7 +56,7 @@ function startGame() {
     welcome.style.display = 'none';
     header.innerText = 'TRAVELER, ENTER YOUR NAME: ';
 }
-/************************************************************************************************************************************************************************ */
+/****************************************************************************************************************************************************************/
 // Function begins when the "GO" button is clicked.
 goButton.onclick = function letGo() {
     textbox.style.display = "none";
@@ -81,8 +77,6 @@ goButton.onclick = function letGo() {
 function playerNameCheck() {
     if (playerName.value != '') {
         console.log("Success!");
-        // scene3();
-        // scene2();
         introScene();
         playerName.setAttribute("type", "hidden"); //HIDES TEXT BOX.
         goButton.setAttribute("type", "hidden"); // HIDES GO BUTTON
@@ -122,7 +116,7 @@ function introChoice() {
     });
 }
 
-/************************************************************************************************************************************************************************ */
+/******************************************************************************************************************************************************************/
 function scene3() {
 
     // var back = document.getElementById('back');
@@ -277,12 +271,6 @@ function textboxVariables(answers, question) {
         }
         if (answerCount == 4) {
             console.log("LAST ONE.");
-            // nextButton.style.display = 'block';
-            // If the first index is false, update the score
-            // if (!flagArray[answerCount])
-            //     point += 20;
-            // // Sets the first index to true after the points have been added, so the score doesn't get updated again.
-            // flagArray[answerCount] = true;
             nextButton.style.display = 'none';
             answerOne.style.display = 'none';
             answerTwo.style.display = 'none';
@@ -340,7 +328,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 20;
+                point += 25;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueA();
@@ -348,16 +336,28 @@ function textboxVariables(answers, question) {
         }
         if (answerCount == 1) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point += 25;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueB();
             nextButton.style.display = 'block';
         }
         if (answerCount == 2) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point -= 10;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueC();
             nextButton.style.display = 'block';
         }
         if (answerCount == 3) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point += 25;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueD();
             nextButton.style.display = 'block';
         }
@@ -373,7 +373,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point -= 15;
+                point -= 10;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueA2();
@@ -382,15 +382,27 @@ function textboxVariables(answers, question) {
         if (answerCount == 1) {
             console.log("Success!");
             blueB2();
+            if (!flagArray[answerCount])
+                point -= 10;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             nextButton.style.display = 'block';
         }
         if (answerCount == 2) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point += 25;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueC2();
             nextButton.style.display = 'block';
         }
         if (answerCount == 3) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point -= 15;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueD2();
             nextButton.style.display = 'block';
         }
@@ -423,30 +435,22 @@ function red() {
         // Index 0 of the array. Contains the first set of answer choices.
         {
             answerOne: 'Old Time Rock and Roll',
-            answerTwo: 'Back in black.',
-            // answerThree: 'RED ONE PILL ANSWER THREE',
-            // answerFour: 'RED ONE PILL ANSWER FOUR'
+            answerTwo: 'Back in black.'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
             answerOne: 'Ain’t nobody.',
-            answerTwo: 'Let’s hear it for the Boy',
-            // answerThree: 'RED TWO PILL ANSWER THREE',
-            // answerFour: 'RED TWO PILL ANSWER FOUR'
+            answerTwo: 'Let’s hear it for the Boy'
         },
         // Index 2 of the array. Contains the third set of answer choices.
         {
             answerOne: "It's Tricky",
-            answerTwo: "It's Like That",
-            // answerThree: 'RED THREE PILL ANSWER THREE',
-            // answerFour: 'RED THREE PILL ANSWER FOUR'
+            answerTwo: "It's Like That"
         },
         // Index 3 of the array. Contains the fourth set of answer choices.
         {
             answerOne: 'Hungry Eyes',
-            answerTwo: "(I've Had) The Time of My Life.",
-            // answerThree: 'RED FOUR PILL ANSWER THREE',
-            // answerFour: 'RED FOUR PILL ANSWER FOUR'
+            answerTwo: "(I've Had) The Time of My Life."
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
         {
@@ -479,10 +483,10 @@ function red() {
 function blue() {
     scene.innerText = '';
     let questions = ["The Delorean takes you back to Sherman High School (1984). Five students are serving Saturday's Detention. John Bender, the criminal, wants you to help him close the door. What do you do? ",
-        'BLUE SCENE QUESTION TWO',
-        'BLUE SCENE QUESTION THREE',
-        'BLUE SCENE QUESTION FOUR',
-        'BLUE SCENE QUESTION FIVE'
+        "The next stop the Delorean takes you is to Ferris Bueller's house. He decides to sick school for the day and his girlfriend Sloane and best friend Cameron are coming too. He wants to surprise them and make them smile. Where should he take them? ",
+        player + ' you are riding in the Delorean and you see the Ghostbuster close by. You hear "If there is something weird and it dont look good. Who you gonna call? "',
+        "The last past the Delorean takes you is 1955, Hill Valley, CA (Yes, your last challenge is to help Marty McFly). Marty has just gotten his parents back together at the school dance, and to celebrate he wants to play a song. What song should he choose? ",
+        // 'BLUE SCENE QUESTION FIVE'
     ];
 
     // Set the question's innerText to the value of the current index. (If you're on the third set of answers, set the question to the question 3, which is 'Red Three').
@@ -491,39 +495,29 @@ function blue() {
     answers = [
         // Index 0 of the array. Contains the first set of answer choices.
         {
-            // answerOne: 'Old Time Rock and Roll',
-            // answerTwo: 'Back in black.',
             answerThree: 'You help Bender out.',
             answerFour: 'You dont help Bender.'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
-            // answerOne: 'Ain’t nobody.',
-            // answerTwo: 'Let’s hear it for the Boy',
-            answerThree: 'RED TWO PILL ANSWER THREE',
-            answerFour: 'RED TWO PILL ANSWER FOUR'
+            answerThree: 'Von Steuben Day Parade',
+            answerFour: 'Dodger Stadium'
         },
         // Index 2 of the array. Contains the third set of answer choices.
         {
-            // answerOne: 'RED THREE PILL ANSWER ONE',
-            // answerTwo: 'RED THREE PILL ANSWER TWO',
-            answerThree: 'RED THREE PILL ANSWER THREE',
-            answerFour: 'RED THREE PILL ANSWER FOUR'
+            answerThree: 'Beetlejuice',
+            answerFour: 'Ghostbusters'
         },
         // Index 3 of the array. Contains the fourth set of answer choices.
         {
-            // answerOne: 'RED FOUR PILL ANSWER ONE',
-            // answerTwo: 'RED FOUR PILL ANSWER TWO',
-            answerThree: 'RED FOUR PILL ANSWER THREE',
-            answerFour: 'RED FOUR PILL ANSWER FOUR'
+            answerThree: 'Johnny B Goode',
+            answerFour: 'Back in Time'
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
-        {
-            // answerOne: 'RED FIVE PILL ANSWER ONE',
-            // answerTwo: 'RED FIVE PILL ANSWER TWO',
-            answerThree: 'RED FIVE PILL ANSWER THREE',
-            answerFour: 'RED FIVE PILL ANSWER FOUR'
-        }
+        // {
+        //     answerThree: 'RED FIVE PILL ANSWER THREE',
+        //     answerFour: 'RED FIVE PILL ANSWER FOUR'
+        // }
     ];
 
     // Calls the function to create the text boxes. Passes the array of questions and the array of obecjts for the answers (so they don't have to be global variables).
@@ -539,9 +533,6 @@ function blue() {
         question.innerText = questions[answerCount];
 
     });
-    // homeButton.addEventListener("click", function() {
-    //     begin();
-    // });
 }
 /*****************************************************************************************************************************************************************/
 
@@ -796,10 +787,11 @@ function blueA2() {
 }
 
 function blueB() {
-    question.innerText = 'BLUE MOVIE ANSWER TWO';
+    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 20 points';
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
@@ -808,7 +800,7 @@ function blueB() {
 }
 
 function blueB2() {
-    question.innerText = 'BLUE ALTERNATE ANSWER TWO ';
+    question.innerText = 'Unfortunately, ' + player + 'Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
@@ -816,6 +808,7 @@ function blueB2() {
     answerFour.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
@@ -824,10 +817,11 @@ function blueB2() {
 }
 
 function blueC() {
-    question.innerText = "BLUE MOVIE ANSWER THREE";
+    question.innerText = "You chose Beetlejuice and even though you dont have to call him to summon him, you have to do it three times. I don't think we need that hassle " + player + ". You lose 10 points";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
@@ -836,13 +830,14 @@ function blueC() {
 }
 
 function blueC2() {
-    question.innerText = "BLUE ALTERNATE ANSWER THREE";
+    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 20 points ";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
@@ -851,51 +846,79 @@ function blueC2() {
 }
 
 function blueD() {
-    question.innerText = "BLUE MOVIE ANSWER FOUR";
+    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 25 points.";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
+        winStatement();
     });
 }
 
 function blueD2() {
-    question.innerText = "BLUE ALTERNATE ANSWER FOUR ";
+    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
     document.body.style.backgroundImage = "url(footloose.jpeg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'block';
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
+        winStatement();
     });
 }
 
-var reward = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
-var rand = reward[Math.floor(Math.random() * reward.length)];
+function winStatement() {
+    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+    nextButton.addEventListener("click", function() {
+        winBlue();
+    });
+}
 
-// function winRed() {
-//     if (point >= 300) {
-//         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
-//         nextButton.addEventListener("click", function() {
-//             theEnd();
-//         });
 
-//     } else {
-//         question.innerText = player + " I regret to inform you that you on gain " + points + " points this time. You cannot recieve the reward and will not be able to go home. However, thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two....";
-//     }
-// }
+var rewards = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM', 'INVISIBILITY'];
+var rands = reward[Math.floor(Math.random() * reward.length)];
 
-// function theEnd() {
-//     question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two.... "
-// }
+function winBlue() {
+    if (point >= 400) {
+        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rands;
+        nextButton.addEventListener("click", function() {
+            nextButton.innerText = 'START OVER';
+            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
+            theEnd();
+        });
+
+    }
+    if (point < 400) {
+        console.log(point + "jj");
+        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
+        nextButton.addEventListener("click", function() {
+            nextButton.innerText = 'START OVER';
+            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
+            theEnd();
+        });
+    }
+}
+
+function theEnd() {
+    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
+    nextButton.addEventListener("click", function() {
+        location.reload();
+    });
+}
