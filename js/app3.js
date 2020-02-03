@@ -724,10 +724,11 @@ function winStatement() {
     });
 }
 
-var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
-var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
+
 
 function winRed() {
+    var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
+    var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
     if (point >= 300) {
         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + boothRewards;
         nextButton.addEventListener("click", function() {
@@ -872,7 +873,7 @@ function blueD() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
-        winStatement();
+        winStatement1();
     });
 }
 
@@ -890,11 +891,11 @@ function blueD2() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
-        winStatement();
+        winStatement1();
     });
 }
 
-function winStatement() {
+function winStatement1() {
     question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winBlue();
