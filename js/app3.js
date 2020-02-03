@@ -17,7 +17,7 @@ let answers;
 var nextButton = document.getElementById('next');
 var proceedButton = document.getElementById('proceed');
 // var backButton = document.getElementById('back');
-var homeButton = document.getElementById('home');
+// var homeButton = document.getElementById('home');
 // Create Go Button
 var goButton = document.createElement("input");
 // Counter for answers
@@ -35,15 +35,6 @@ scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
 /************************************************************************************************************************************************************************ */
-
-function begin() {
-    welcome.innerText = 'A BLAST TO THE PAST';
-    welcome.style.visibility = 'visible';
-    textbox.style.display = "none";
-    introBox.style.display = "none";
-    scoreBoard.style.display = "none";
-    start.style.display = 'block';
-}
 /************************************************************************************************************************************************************************ */
 // Function begins when the "Start" button is pressed.
 function startGame() {
@@ -702,16 +693,45 @@ function redD2() {
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
+        winStatement();
+    });
+}
+
+function winStatement() {
+    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+    nextButton.addEventListener("click", function() {
         winRed();
     });
 }
 
+var reward = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
+var rand = reward[Math.floor(Math.random() * reward.length)];
+
 function winRed() {
     if (point >= 300) {
-        question.innerText = "You win";
-    } else {
-        question.innerText = "You lose";
+        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
+        nextButton.addEventListener("click", function() {
+            nextButton.innerText = 'Start Over';
+            theEnd();
+        });
+
     }
+    if (point < 300) {
+        console.log(point + "jj");
+        nextButton.innerText = 'START OVER';
+
+        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home. However, thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two....";
+        nextButton.addEventListener("click", function() {
+            location.reload();
+        });
+    }
+}
+
+function theEnd() {
+    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
+    nextButton.addEventListener("click", function() {
+        location.reload();
+    });
 }
 
 /********************************************************************************************************************************************************************** */
@@ -829,3 +849,22 @@ function blueD2() {
         answerFour.style.display = 'none';
     });
 }
+
+var reward = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
+var rand = reward[Math.floor(Math.random() * reward.length)];
+
+// function winRed() {
+//     if (point >= 300) {
+//         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
+//         nextButton.addEventListener("click", function() {
+//             theEnd();
+//         });
+
+//     } else {
+//         question.innerText = player + " I regret to inform you that you on gain " + points + " points this time. You cannot recieve the reward and will not be able to go home. However, thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two....";
+//     }
+// }
+
+// function theEnd() {
+//     question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Until part two.... "
+// }

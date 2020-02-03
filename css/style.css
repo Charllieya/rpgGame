@@ -1,6 +1,6 @@
     body {
-        /* width: 100%;
-        height: auto; */
+        width: 100%;
+        /* height: auto; */
         background-image: url(../images/timeTravel.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -40,14 +40,6 @@
         background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
         background-position: -680px 0;
         background-color: #32120E;
-        /* -webkit-background-clip: text;
-        -webkit-text-stroke: 0;
-        padding-right: 300px;
-        -webkit-animation-name: chrome_effect;
-        -webkit-animation-duration: 6s;
-        -webkit-animation-delay: 2s;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-iteration-count: infinite; */
     }
     
     .header {

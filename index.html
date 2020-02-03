@@ -15,41 +15,70 @@
     <!--IMAGES-->
 
     <!-- <img src="/images/timeTravel.jpg" alt="time" height="" width="" class="img-responsive" id='timeTravel'> -->
-
-    <h2 id="welcome" class="welcome"></h2>
-    <h2 id="header" class="header"></h2>
-    <h2 id="options" class="options"></h2>
-    <h2 id="choice"> </h2>
-
-    <button id="start" onclick="startGame()">START</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 id="welcome" class="welcome"></h2>
+                <h2 id="header" class="header"></h2>
+                <h2 id="options" class="options"></h2>
+                <h2 id="choice"> </h2>
+                <button id="start" onclick="startGame()">START</button>
+            </div>
+        </div>
+    </div>
+    <!-- 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <button id="start" onclick="startGame()">START</button>
+            </div>
+        </div>
+    </div> -->
     <!-- <button id="goButton" onclick="letGo()">GO</button> -->
 
 
     <!-- <input type="text" id="name" class="name">
     <input type="button" id="goButton" class=" goButton " value="GO" onclick="scene2() "> -->
     <!-- <p id="demo"></p> -->
-    <div id="scoreboard" class="score">
-        <h3>SCORE: <span id="points"></span></h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="scoreboard" class="score">
+                    <h3>SCORE: <span id="points"></span></h3>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="introBox" class="text-box">
-        <h2 id="intro" class="question"></h2>
-        <button id="proceed" class="proceedBox">proceed</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="introBox" class="text-box">
+                    <h2 id="intro" class="question"></h2>
+                    <button id="proceed" class="proceedBox">proceed</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div id="textbox" class="text-box">
-        <h1 id="scene" class="scene"></h1>
-        <h2 id="question" class="question"></h2>
-        <!-- <h3 id="answer"></h3> -->
-        <button id="answer1" class="answerBox"></button>
-        <button id="answer2" class="answerBox">2</button>
-        <BR>
-        <button id="answer3" class="answerBox">3</button>
-        <button id="answer4" class="answerBox">4</button>
-        <br>
-        <!-- <button id="home" class="answerBox">START OVER</button> -->
-        <!-- <button id="back" class="answerBox">BACK</button> -->
-        <button id="next" class="nextBox">NEXT</button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="textbox" class="text-box">
+                    <h1 id="scene" class="scene"></h1>
+                    <h2 id="question" class="question"></h2>
+                    <!-- <h3 id="answer"></h3> -->
+                    <button id="answer1" class="answerBox"></button>
+                    <button id="answer2" class="answerBox">2</button>
+                    <BR>
+                    <button id="answer3" class="answerBox">3</button>
+                    <button id="answer4" class="answerBox">4</button>
+                    <br>
+                    <!-- <button id="home" class="nextBox">START OVER</button> -->
+                    <!-- <button id="back" class="answerBox">BACK</button> -->
+                    <button id="next" class="nextBox">NEXT</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/app3.js "></script>
