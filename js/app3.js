@@ -331,7 +331,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 25;
+                point += 30;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueA();
@@ -724,7 +724,7 @@ function winStatement() {
 }
 
 var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
-var boothRewards = reward[Math.floor(Math.random() * reward.length)];
+var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
 
 function winRed() {
     if (point >= 300) {
@@ -734,7 +734,7 @@ function winRed() {
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundSize = "cover";
-            theEnd();
+            theEndone();
         });
 
     }
@@ -746,12 +746,12 @@ function winRed() {
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
             document.body.style.backgroundPosition = "center";
             document.body.style.backgroundSize = "cover";
-            theEnd();
+            theEndone();
         });
     }
 }
 
-function theEnd() {
+function theEndone() {
     question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
     nextButton.addEventListener("click", function() {
         location.reload();
@@ -902,7 +902,7 @@ function winStatement() {
 
 
 var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFT'];
-var carRewards = reward[Math.floor(Math.random() * reward.length)];
+var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
 
 function winBlue() {
     if (point >= 400) {
@@ -911,7 +911,7 @@ function winBlue() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
             document.body.style.backgroundSize = "cover";
-            theEnd();
+            theEndtwo();
         });
 
     }
@@ -922,12 +922,12 @@ function winBlue() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
             document.body.style.backgroundSize = "cover";
-            theEnd();
+            theEndtwo();
         });
     }
 }
 
-function theEnd() {
+function theEndtwo() {
     question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
     nextButton.addEventListener("click", function() {
         location.reload();
