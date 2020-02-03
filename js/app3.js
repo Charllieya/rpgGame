@@ -180,6 +180,7 @@ function redPill() {
     point = 250;
     points.innerText = point;
     document.body.style.backgroundImage = "url('images/den.jpeg')";
+    document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
     // document.body.style.backgroundPosition = "fixed";
     answerThree.style.display = 'none';
@@ -200,6 +201,8 @@ function bluePill() {
     choice.style.display = 'none';
     point = 300;
     points.innerText = point;
+    document.body.style.backgroundImage = "url('images/highschool.jpeg')";
+    document.body.style.backgroundSize = "cover";
     // question.innerText = 'Welcome. You have just chosen the MOVIE PILL. ' + player + " You meet Marty McFly and he tells you that ";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -759,14 +762,14 @@ function theEnd() {
 
 function blueA() {
     question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 20 points';
-    document.body.style.backgroundImage = "url(business.jpg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        document.body.style.backgroundImage = "url('images/ferris.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
@@ -775,12 +778,15 @@ function blueA() {
 
 function blueA2() {
     question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 15 points';
+    document.body.style.backgroundImage = "url('images/library.jpeg')";
+    document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(countyside.jpeg)";
+        document.body.style.backgroundImage = "url('images/ferris.jpeg')";
+        document.body.style.backgroundSize = "cover";
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
@@ -788,12 +794,15 @@ function blueA2() {
 
 function blueB() {
     question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 20 points';
+    document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
+    document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
@@ -801,16 +810,16 @@ function blueB() {
 
 function blueB2() {
     question.innerText = 'Unfortunately, ' + player + 'Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
@@ -818,12 +827,15 @@ function blueB2() {
 
 function blueC() {
     question.innerText = "You chose Beetlejuice and even though you dont have to call him to summon him, you have to do it three times. I don't think we need that hassle " + player + ". You lose 10 points";
+    document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
+    document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/parentsBack.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
@@ -831,15 +843,15 @@ function blueC() {
 
 function blueC2() {
     question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 20 points ";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/parentsBack.jpeg')";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'inline';
         answerFour.style.display = 'inline';
     });
@@ -847,16 +859,16 @@ function blueC2() {
 
 function blueD() {
     question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 25 points.";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/delorean.jpeg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'block';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
         winStatement();
@@ -865,15 +877,16 @@ function blueD() {
 
 function blueD2() {
     question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
-    document.body.style.backgroundImage = "url(footloose.jpeg)";
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
+        document.body.style.backgroundImage = "url('images/delorean.jpeg')";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'block';
-        document.body.style.backgroundImage = "url(bar.jpeg)";
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
         winStatement();
@@ -881,7 +894,7 @@ function blueD2() {
 }
 
 function winStatement() {
-    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+    question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winBlue();
     });
@@ -896,8 +909,7 @@ function winBlue() {
         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rands;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
-            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundImage = "url('images/bttF.jpeg')";
             document.body.style.backgroundSize = "cover";
             theEnd();
         });
@@ -908,8 +920,7 @@ function winBlue() {
         question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
-            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundImage = "url('images/bttF.jpeg')";
             document.body.style.backgroundSize = "cover";
             theEnd();
         });
