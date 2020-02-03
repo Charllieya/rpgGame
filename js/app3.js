@@ -723,12 +723,12 @@ function winStatement() {
     });
 }
 
-var reward = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
-var rand = reward[Math.floor(Math.random() * reward.length)];
+var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
+var boothRewards = reward[Math.floor(Math.random() * reward.length)];
 
 function winRed() {
     if (point >= 300) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
+        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + boothRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -800,7 +800,7 @@ function blueB() {
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
+        document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
         document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
         answerThree.style.display = 'inline';
@@ -817,7 +817,7 @@ function blueB2() {
     nextButton.style.display = 'block';
     nextButton.addEventListener("click", function() {
         addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
+        document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
         document.body.style.backgroundSize = "cover";
         nextButton.style.display = 'none';
         answerThree.style.display = 'inline';
@@ -827,7 +827,7 @@ function blueB2() {
 
 function blueC() {
     question.innerText = "You chose Beetlejuice and even though you dont have to call him to summon him, you have to do it three times. I don't think we need that hassle " + player + ". You lose 10 points";
-    document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
+    document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
@@ -843,7 +843,7 @@ function blueC() {
 
 function blueC2() {
     question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 20 points ";
-    document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
+    document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
@@ -901,12 +901,12 @@ function winStatement() {
 }
 
 
-var rewards = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM', 'INVISIBILITY'];
-var rands = reward[Math.floor(Math.random() * reward.length)];
+var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFT'];
+var carRewards = reward[Math.floor(Math.random() * reward.length)];
 
 function winBlue() {
     if (point >= 400) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rands;
+        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
