@@ -31,6 +31,7 @@ introBox.style.display = "none";
 scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
+backgroundImage.className = 'img-responsive';
 /******************************************************************************************************************************************************************/
 // Function begins when the "Start" button is pressed.
 function startGame() {

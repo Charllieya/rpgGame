@@ -1,206 +1,223 @@
-        body {
-            width: 100%;
-            height: auto;
-            background-image: url(../images/timeTravel.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        #welcome {
-            margin-top: 210px;
-            font-size: 100px;
-            border: 3px solid white;
-            text-align: center;
-        }
-        
-        .img-responsive {
-            width: 100%;
-            height: auto;
-        }
-        
-        .welcome {
-            position: relative;
-            background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: 4px #f5f5f5;
-            font-size: 200px;
-            font-family: 'Titillium Web', sans-serif;
-            font-style: italic;
-            margin: 0;
-            line-height: 1;
-        }
-        
-        .welcome:before {
-            /* content: 'CHROME'; */
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 10;
-            background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
-            background-position: -680px 0;
-            background-color: #32120E;
-        }
-        
-        .header {
-            margin-top: 40px;
-            /* background-color: #EC9B4E; */
-            -webkit-text-stroke: 1px #fff;
-            font-size: 75px;
-            color: #32120E;
-            text-align: center;
-            /* border: 3px solid white; */
-        }
-        
-        #start {
-            margin-top: -32px;
-            margin-left: 487px;
-            line-height: 40px;
-            border-radius: 20px;
-            font-size: 30px;
-            font-weight: bold;
-            padding: 7px 40px;
-            background-color: #EC9B4E;
-            color: #378DBC;
-            border: 3px solid white;
-        }
-        
-        .travelButton {
-            margin-top: -4px;
-            margin-left: 341px;
-            line-height: 40px;
-            font: 15px;
-            font-weight: bold;
-            padding: 7px 40px;
-            border: 2px solid #fff;
-        }
-        
-        button:hover {
-            background: lightsalmon;
-        }
-        
-        .answerBox {
-            margin-top: -3px;
-            margin-right: 40px;
-            margin-left: 5px;
-            line-height: 40px;
-            font: 15px;
-            border-radius: 15px;
-            font-weight: bold;
-            padding: 7px 40px;
-            background-color: gray;
-            border: 2px solid rgb(8, 12, 121);
-        }
-        
-        .text-box {
-            margin-top: 245px;
-            margin-left: 137px;
-            margin-right: 128px;
-            height: auto;
-            /* background-color: rgb(46, 46, 46); */
-            /* 
+ body {
+     width: 100%;
+     height: auto;
+     background-image: url(../images/timeTravel.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+ #welcome {
+     margin-top: 210px;
+     font-size: 100px;
+     border: 3px solid white;
+     text-align: center;
+ }
+ 
+ .img-responsive {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ .welcome {
+     position: relative;
+     background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 4px #f5f5f5;
+     font-size: 200px;
+     font-family: 'Titillium Web', sans-serif;
+     font-style: italic;
+     margin: 0;
+     line-height: 1;
+ }
+ 
+ .welcome:before {
+     /* content: 'CHROME'; */
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: 10;
+     background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+     background-position: -680px 0;
+     background-color: #32120E;
+ }
+ 
+ .header {
+     margin-top: 40px;
+     /* background-color: #EC9B4E; */
+     -webkit-text-stroke: 1px #fff;
+     font-size: 75px;
+     color: #32120E;
+     text-align: center;
+     /* border: 3px solid white; */
+ }
+ 
+ #start {
+     margin-top: -32px;
+     margin-left: 487px;
+     line-height: 40px;
+     border-radius: 20px;
+     font-size: 30px;
+     font-weight: bold;
+     padding: 7px 40px;
+     background-color: #EC9B4E;
+     color: #378DBC;
+     border: 3px solid white;
+ }
+ 
+ .travelButton {
+     margin-top: -4px;
+     margin-left: 341px;
+     line-height: 40px;
+     font: 15px;
+     font-weight: bold;
+     padding: 7px 40px;
+     border: 2px solid #fff;
+ }
+ 
+ button:hover {
+     background: lightsalmon;
+ }
+ 
+ .answerBox {
+     margin-top: -3px;
+     margin-right: 40px;
+     margin-left: 5px;
+     line-height: 40px;
+     font: 15px;
+     border-radius: 15px;
+     font-weight: bold;
+     padding: 7px 40px;
+     background-color: gray;
+     border: 2px solid rgb(8, 12, 121);
+ }
+ 
+ .text-box {
+     margin-top: 245px;
+     margin-left: 137px;
+     margin-right: 128px;
+     height: auto;
+     /* background-color: rgb(46, 46, 46); */
+     /* 
         border-top: 10px solid rgb(8, 12, 121); */
-            border: 3px solid rgb(8, 12, 121);
-            background-color: rgba(244, 160, 35, 0.407);
-            text-align: center;
-        }
-        
-        .xButton {
-            border-radius: 0px;
-        }
-        
-        .scene {
-            color: #fff;
-        }
-        
-        .question {
-            border-radius: 0px;
-            color: #fff;
-            font-size: 25px;
-        }
-        
-        .nameBox {
-            margin-top: -61px;
-            margin-left: 517px;
-            width: 150px;
-            height: 25px;
-            font-size: 15px;
-            border: 3px solid black;
-        }
-        
-        .nextBox {
-            margin-top: -15px;
-            margin-left: 370px;
-            line-height: 40px;
-            border-radius: 0px;
-            padding: 7px 40px;
-            background-color: gray;
-            border: 2px solid rgb(8, 12, 121);
-        }
-        
-        .proceedBox {
-            margin-top: 17px;
-            margin-left: 20px;
-            line-height: 40px;
-            border-radius: 0px;
-            padding: 7px 40px;
-            background-color: gray;
-            border: 2px solid rgb(8, 12, 121);
-        }
-        
-        h3 {
-            text-align: center;
-        }
-        
-        .score {
-            margin-top: -45px;
-            width: 100%;
-            background: rgb(72, 72, 72);
-            border: 1px solid purple;
-            height: 50px;
-        }
-        
-        @media (min-width:200px) and (max-width:767px) {
-            #start {
-                margin-top: -32px;
-                margin-left: 61px;
-                line-height: 40px;
-                border-radius: 20px;
-                font-size: 30px;
-                font-weight: bold;
-                padding: 2px 30px;
-                background-color: #EC9B4E;
-                color: #378DBC;
-                border: 3px solid white;
-            }
-            #welcome {
-                margin-top: 20px;
-                margin-left: 0px;
-                font-size: 81px;
-                border: 3px solid white;
-                text-align: center;
-            }
-        }
-        
-        @media (min-width:767px) and (max-width:991px) {
-            #welcome {
-                margin-top: 267px;
-                margin-right: 30px;
-                font-size: 63px;
-                border: 3px solid white;
-                text-align: center;
-                margin-left: 77px;
-            }
-            #start {
-                margin-top: -32px;
-                margin-left: 300px;
-                line-height: 40px;
-                border-radius: 20px;
-                font-size: 30px;
-                font-weight: bold;
-                padding: 7px 40px;
-                background-color: #EC9B4E;
-                color: #378DBC;
-                border: 3px solid white;
-            }
-        }
+     border: 3px solid rgb(8, 12, 121);
+     background-color: rgba(244, 160, 35, 0.407);
+     text-align: center;
+ }
+ 
+ .xButton {
+     border-radius: 0px;
+ }
+ 
+ .scene {
+     color: #fff;
+ }
+ 
+ .question {
+     border-radius: 0px;
+     color: #fff;
+     font-size: 25px;
+ }
+ 
+ .nameBox {
+     margin-top: -61px;
+     margin-left: 517px;
+     width: 150px;
+     height: 25px;
+     font-size: 15px;
+     border: 3px solid black;
+ }
+ 
+ .nextBox {
+     margin-top: -15px;
+     margin-left: 370px;
+     line-height: 40px;
+     border-radius: 0px;
+     padding: 7px 40px;
+     background-color: gray;
+     border: 2px solid rgb(8, 12, 121);
+ }
+ 
+ .proceedBox {
+     margin-top: 17px;
+     margin-left: 20px;
+     line-height: 40px;
+     border-radius: 0px;
+     padding: 7px 40px;
+     background-color: gray;
+     border: 2px solid rgb(8, 12, 121);
+ }
+ 
+ h3 {
+     text-align: center;
+ }
+ 
+ .score {
+     margin-top: -45px;
+     width: 100%;
+     background: rgb(72, 72, 72);
+     border: 1px solid purple;
+     height: 50px;
+ }
+ 
+ @media (min-width:200px) and (max-width:767px) {
+     #start {
+         margin-top: -32px;
+         margin-left: 61px;
+         line-height: 40px;
+         border-radius: 20px;
+         font-size: 30px;
+         font-weight: bold;
+         padding: 2px 30px;
+         background-color: #EC9B4E;
+         color: #378DBC;
+         border: 3px solid white;
+     }
+     #welcome {
+         margin-top: 20px;
+         margin-left: 0px;
+         font-size: 81px;
+         border: 3px solid white;
+         text-align: center;
+     }
+     .header {
+         margin-top: 32px;
+         /* background-color: #EC9B4E; */
+         -webkit-text-stroke: 2px #fff;
+         font-size: 52px;
+         color: #32120E;
+         text-align: center;
+         /* border: 3px solid white; */
+     }
+     .nameBox {
+         margin-bottom: 33px;
+         margin-left: 79px;
+         width: 150px;
+         height: 29px;
+         font-size: 18px;
+         border: 3px solid black;
+     }
+ }
+ 
+ @media (min-width:767px) and (max-width:991px) {
+     #welcome {
+         margin-top: 267px;
+         margin-right: 30px;
+         font-size: 63px;
+         border: 3px solid white;
+         text-align: center;
+         margin-left: 77px;
+     }
+     #start {
+         margin-top: -32px;
+         margin-left: 300px;
+         line-height: 40px;
+         border-radius: 20px;
+         font-size: 30px;
+         font-weight: bold;
+         padding: 7px 40px;
+         background-color: #EC9B4E;
+         color: #378DBC;
+         border: 3px solid white;
+     }
+ }
