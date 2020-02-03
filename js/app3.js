@@ -175,7 +175,7 @@ function scene3() {
 //FUNCTIONS CREATED FOR EACH STORY. 
 
 function redPill() {
-    scene.innerHTML = 'You have Choosen to take the phonebooth back to the 20th Century';
+    scene.innerText = 'You have Choosen to take the phonebooth back to the 20th Century';
     console.log(player + "You have Choosen to take the DeLorean back to the 20th Century");
     welcome.innerText = '';
     header.innerText = '';
@@ -339,6 +339,10 @@ function textboxVariables(answers, question) {
     answerThree.addEventListener("click", function() {
         if (answerCount == 0) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point += 20;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueA();
             nextButton.style.display = 'block';
         }
@@ -368,6 +372,10 @@ function textboxVariables(answers, question) {
     answerFour.addEventListener("click", function() {
         if (answerCount == 0) {
             console.log("Success!");
+            if (!flagArray[answerCount])
+                point -= 15;
+            // Sets the first index to true after the points have been added, so the score doesn't get updated again.
+            flagArray[answerCount] = true;
             blueA2();
             nextButton.style.display = 'block';
         }
@@ -398,6 +406,7 @@ function textboxVariables(answers, question) {
 //FUNCTION TO START THE GAME FOR THE RED PIll
 
 function red() {
+    scene.innerText = '';
     // An array of all the questions.
     let questions = [player + ', the phonebooth takes you to Joel Goodsen house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dads stero, so he can dance around in the living room. What song do you choose?',
         'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
@@ -468,7 +477,8 @@ function red() {
 }
 /*****************************************************************************BLUE GAME*********************************************************************** */
 function blue() {
-    let questions = ['BLUE SCENE QUESTION ONE',
+    scene.innerText = '';
+    let questions = ["The Delorean takes you back to Sherman High School (1984). Five students are serving Saturday's Detention. John Bender, the criminal, wants you to help him close the door. What do you do? ",
         'BLUE SCENE QUESTION TWO',
         'BLUE SCENE QUESTION THREE',
         'BLUE SCENE QUESTION FOUR',
@@ -483,8 +493,8 @@ function blue() {
         {
             // answerOne: 'Old Time Rock and Roll',
             // answerTwo: 'Back in black.',
-            answerThree: 'RED ONE PILL ANSWER THREE',
-            answerFour: 'RED ONE PILL ANSWER FOUR'
+            answerThree: 'You help Bender out.',
+            answerFour: 'You dont help Bender.'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
@@ -727,6 +737,9 @@ function winRed() {
         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + rand;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
+            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
             theEnd();
         });
 
@@ -736,6 +749,9 @@ function winRed() {
         question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
+            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundSize = "cover";
             theEnd();
         });
     }
@@ -751,13 +767,14 @@ function theEnd() {
 /********************************************************************************************************************************************************************** */
 
 function blueA() {
-    question.innerText = 'BLUE MOVIE ANSWER ONE';
+    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 20 points';
     document.body.style.backgroundImage = "url(business.jpg)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         nextButton.style.display = 'none';
         answerThree.style.display = 'inline';
@@ -766,10 +783,11 @@ function blueA() {
 }
 
 function blueA2() {
-    question.innerText = 'BLUE ALTERNATE ANSWER ONE';
+    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 15 points';
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     nextButton.addEventListener("click", function() {
+        addPoints(points.innerText, point);
         nextButton.style.display = 'none';
         document.body.style.backgroundImage = "url(countyside.jpeg)";
         answerThree.style.display = 'inline';
