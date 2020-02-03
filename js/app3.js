@@ -408,11 +408,11 @@ function textboxVariables(answers, question) {
 
 function red() {
     // An array of all the questions.
-    let questions = [player + ', Tom Cruise invites you to come over. He has the house to himself for a few days. You are excited. The first thing he ask you to do is play a song on the radio so he dance around in the living room. What song do you choose?',
+    let questions = [player + ', the phonebooth takes you to Joel Goodsen house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dads stero, so he can dance around in the living room. What song do you choose?',
         'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
         'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Blair Underwood arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
-        player + ', you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
+        // player + ', you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
     ];
 
     // Set the question's innerText to the value of the current index. (If you're on the third set of answers, set the question to the question 3, which is 'Red Three').
@@ -450,8 +450,8 @@ function red() {
         },
         // Index 5 of the array. Contains the fifth set of answer choices.
         {
-            answerOne: 'RED FIVE PILL ANSWER ONE',
-            answerTwo: 'RED FIVE PILL ANSWER TWO',
+            // answerOne: 'RED FIVE PILL ANSWER ONE',
+            // answerTwo: 'RED FIVE PILL ANSWER TWO',
             // answerThree: 'RED FIVE PILL ANSWER THREE',
             // answerFour: 'RED FIVE PILL ANSWER FOUR'
         }
@@ -685,6 +685,7 @@ function redD() {
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
+        winRed();
     });
 }
 
@@ -701,8 +702,18 @@ function redD2() {
         document.body.style.backgroundImage = "url(bar.jpeg)";
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
+        winRed();
     });
 }
+
+function winRed() {
+    if (point >= 300) {
+        question.innerText = "You win";
+    } else {
+        question.innerText = "You lose";
+    }
+}
+
 /********************************************************************************************************************************************************************** */
 
 function blueA() {

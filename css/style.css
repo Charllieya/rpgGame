@@ -101,15 +101,15 @@
     }
     
     .text-box {
-        margin-top: 225px;
-        margin-left: 32px;
+        margin-top: 245px;
+        margin-left: 137px;
         margin-right: 128px;
         height: auto;
         /* background-color: rgb(46, 46, 46); */
         /* 
         border-top: 10px solid rgb(8, 12, 121); */
-        border: 3px solid rgb(91, 91, 99);
-        background-color: rgba(255, 98, 0, 0.407);
+        border: 3px solid rgb(8, 12, 121);
+        background-color: rgba(244, 160, 35, 0.407);
         text-align: center;
     }
     
