@@ -163,16 +163,10 @@
  
  @media (min-width:200px) and (max-width:767px) {
      #start {
-         margin-top: -32px;
          margin-left: 92px;
-         line-height: 40px;
          border-radius: 20px;
          font-size: 30px;
-         font-weight: bold;
          padding: 2px 30px;
-         background-color: #EC9B4E;
-         color: #378DBC;
-         border: 3px solid white;
      }
      #welcome {
          margin-top: 390px;
@@ -242,7 +236,7 @@
  
  @media (min-width:767px) and (max-width:991px) {
      #welcome {
-         margin-top: 267px;
+         margin-top: 400px;
          margin-right: 30px;
          font-size: 63px;
          border: 3px solid white;
@@ -260,14 +254,6 @@
      #start {
          margin-top: -32px;
          margin-left: 300px;
-         line-height: 40px;
-         border-radius: 20px;
-         font-size: 30px;
-         font-weight: bold;
-         padding: 7px 40px;
-         background-color: #EC9B4E;
-         color: #378DBC;
-         border: 3px solid white;
      }
      .nextBox {
          margin-top: -15px;
@@ -284,5 +270,14 @@
          font-weight: bold;
          padding: 7px 40px;
          border: 2px solid #fff;
+     }
+     .answerBox {
+         margin-top: 4px;
+         margin-right: 6px;
+         margin-left: -2px;
+         line-height: 18px;
+         font: 15px;
+         border-radius: 15px;
+         font-weight: bold;
      }
  }
