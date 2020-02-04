@@ -549,8 +549,8 @@ function blue() {
 }
 /*****************************************************************************************************************************************************************/
 
-var answerOne = document.getElementById('answer1');
-var answerTwo = document.getElementById('answer2');
+// var answerOne = document.getElementById('answer1');
+// var answerTwo = document.getElementById('answer2');
 
 // function sleep(milliseconds) {
 //     const date = Date.now();
@@ -772,7 +772,7 @@ function theEndone() {
 /********************************************************************************************************************************************************************** */
 
 function blueA() {
-    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 20 points';
+    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 points';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -788,7 +788,7 @@ function blueA() {
 }
 
 function blueA2() {
-    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 15 points';
+    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 10 points';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -804,7 +804,7 @@ function blueA2() {
 }
 
 function blueB() {
-    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 20 points';
+    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 25 points';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -853,7 +853,7 @@ function blueC() {
 }
 
 function blueC2() {
-    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 20 points ";
+    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 25 points ";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -887,7 +887,7 @@ function blueD() {
 }
 
 function blueD2() {
-    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
+    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 15 points. ";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
