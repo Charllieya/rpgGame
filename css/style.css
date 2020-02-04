@@ -163,7 +163,7 @@
  @media (min-width:200px) and (max-width:767px) {
      #start {
          margin-top: -32px;
-         margin-left: 61px;
+         margin-left: 92px;
          line-height: 40px;
          border-radius: 20px;
          font-size: 30px;
@@ -174,7 +174,7 @@
          border: 3px solid white;
      }
      #welcome {
-         margin-top: 351px;
+         margin-top: 390px;
          margin-left: -14px;
          margin-right: -14px;
          font-size: 81px;
