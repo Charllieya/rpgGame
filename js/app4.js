@@ -1,39 +1,29 @@
-// Create Welcome Header
-var welcome = document.getElementById('welcome');
-var header = document.getElementById('header');
-/****************************************************************** */
-//DECLARING INTRO VARIABLES GLOBALLY.
+var textbox = document.getElementById("textbox");
 var introBox = document.getElementById("introBox");
 var intro = document.getElementById('intro');
-var proceedButton = document.getElementById('proceed');
-/****************************************************************** */
-//DECLARING THE TEXTBOX AND ANSWERBOX VARIABLES GLOBALLY.
-var textbox = document.getElementById("textbox");
+var scoreBoard = document.getElementById("scoreboard");
+var point;
+var points = document.getElementById("points");
 var answerOne = document.getElementById('answer1');
 var answerTwo = document.getElementById('answer2');
 var answerThree = document.getElementById('answer3');
 var answerFour = document.getElementById('answer4');
-let answers;
-var nextButton = document.getElementById('next');
-// Counter for answers to continue to next question.
-var answerCount = 0;
-// Array of flase values
-var flagArray = [false, false, false, false, false];
-/****************************************************************** */
-//DECLARING THE SCOREBOARD VARIABLE
-var scoreBoard = document.getElementById("scoreboard");
-//DECLARING THE POINTS AND INITIALIZING THE POINT
-var point = 0;
-//to print points onto screen.
-var points = document.getElementById("points");
-/****************************************************************** */
-// Create Text Box dynamically for the player's name. Then set the id of the Text Box to "playerName"
-var player;
+// Create Text Box for the player's name. Then set the id of the Text Box to "playerName"
 var playerName = document.createElement("input");
 playerName.setAttribute("id", "playerName");
+var player;
+let answers;
+var nextButton = document.getElementById('next');
+var proceedButton = document.getElementById('proceed');
 // Create Go Button
 var goButton = document.createElement("input");
-/****************************************************************** */
+// Counter for answers
+var answerCount = 0;
+// Create Welcome Header
+var welcome = document.getElementById('welcome');
+var header = document.getElementById('header');
+// Array of flase values
+var flagArray = [false, false, false, false, false];
 welcome.innerText = 'A BLAST TO THE PAST';
 // welcome.style.color = 'white';
 textbox.style.display = "none";
@@ -41,6 +31,7 @@ introBox.style.display = "none";
 scoreBoard.style.display = "none";
 var start = document.getElementById("start");
 choice.style.display = 'none';
+// backgroundImage.className = 'img-responsive';
 /******************************************************************************************************************************************************************/
 // Function begins when the "Start" button is pressed.
 function startGame() {
@@ -559,7 +550,6 @@ var answerTwo = document.getElementById('answer2');
 //         currentDate = Date.now();
 //     } while (currentDate - date < milliseconds);
 // }
-
 function addPoints(currentPoints, endPoints) {
     // If you're adding numbers to the current points..
     if (endPoints > currentPoints) {
@@ -580,6 +570,20 @@ function addPoints(currentPoints, endPoints) {
     }
 }
 
+
+function nextbutton() {
+    addPoints(points.innerText, point);
+    //points.innerText = point;
+    // document.body.style.backgroundImage = "url('images/barn.jpeg')";
+    // document.body.style.backgroundSize = "auto";
+    document.body.style.backgroundPosition = "center";
+    nextButton.style.display = 'none';
+    answerOne.style.display = 'inline';
+    answerTwo.style.display = 'inline';
+}
+
+nextButton.addEventListener("click", nextbutton);
+
 function redA() {
     question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
@@ -587,360 +591,6 @@ function redA() {
     document.body.style.backgroundSize = "cover";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        //points.innerText = point;
-        document.body.style.backgroundImage = "url('images/barn.jpeg')";
-        // document.body.style.backgroundSize = "auto";
-        document.body.style.backgroundPosition = "center";
-        nextButton.style.display = 'none';
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-    // answerOne.style.display = 'block';
-}
-
-function redA2() {
-    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose 10 points. ';
-    document.body.style.backgroundImage = "url('images/living.jpeg')";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/barn.jpeg')";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-}
-
-function redB() {
-    question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Chris just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
-    document.body.style.backgroundImage = "url('images/footloose.jpg')";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/gameroom.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-}
-
-function redB2() {
-    question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Chris manages to stay on key the entire song. You just earned your  20 points. ';
-    document.body.style.backgroundImage = "url('images/footloose.jpg')";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.style.display = 'block';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/gameroom.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-}
-
-function redC() {
-    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points!.";
-    document.body.style.backgroundImage = "url('images/openBar.jpeg')";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/countyside.jpeg')";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-}
-
-function redC2() {
-    question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
-    document.body.style.backgroundImage = "url('images/openBar.jpeg')";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/countyside.jpeg')";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        answerOne.style.display = 'inline';
-        answerTwo.style.display = 'inline';
-    });
-}
-
-function redD() {
-    question.innerText = "You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.";
-    document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.backgroundSize = "cover";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        document.body.style.backgroundImage = "url('images/phonebooth.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'block';
-        answerOne.style.display = 'none';
-        answerTwo.style.display = 'none';
-        winStatement();
-    });
-}
-
-function redD2() {
-    question.innerText = "You choose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
-    document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
-    answerOne.style.display = 'none';
-    answerTwo.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        points.innerText = point;
-        document.body.style.backgroundImage = "url('images/phonebooth.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'block';
-        answerOne.style.display = 'none';
-        answerTwo.style.display = 'none';
-        winStatement();
-    });
-}
-
-function winStatement() {
-    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
-    nextButton.addEventListener("click", function() {
-        winRed();
-    });
-}
-
-
-
-function winRed() {
-    var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
-    var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
-    if (point >= 300) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + boothRewards;
-        nextButton.addEventListener("click", function() {
-            nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundSize = "cover";
-            theEndone();
-        });
-
-    }
-    if (point < 300) {
-        console.log(point + "jj");
-        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
-        nextButton.addEventListener("click", function() {
-            nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/billandted.jpeg')";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundSize = "cover";
-            theEndone();
-        });
-    }
-}
-
-function theEndone() {
-    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
-    nextButton.addEventListener("click", function() {
-        location.reload();
-    });
-}
-
-/********************************************************************************************************************************************************************** */
-
-function blueA() {
-    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 20 points';
-    document.body.style.backgroundImage = "url('images/library.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/ferris.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'none';
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueA2() {
-    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 15 points';
-    document.body.style.backgroundImage = "url('images/library.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        nextButton.style.display = 'none';
-        document.body.style.backgroundImage = "url('images/ferris.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueB() {
-    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 20 points';
-    document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'none';
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueB2() {
-    question.innerText = 'Unfortunately, ' + player + 'Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
-    document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.style.display = 'block';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/marshmallow.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'none';
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueC() {
-    question.innerText = "You chose Beetlejuice and even though you dont have to call him to summon him, you have to do it three times. I don't think we need that hassle " + player + ". You lose 10 points";
-    document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/parentsBack.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'none';
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueC2() {
-    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 20 points ";
-    document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/parentsBack.jpeg')";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'none';
-        answerThree.style.display = 'inline';
-        answerFour.style.display = 'inline';
-    });
-}
-
-function blueD() {
-    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 25 points.";
-    document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/delorean.jpeg')";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'block';
-        answerThree.style.display = 'none';
-        answerFour.style.display = 'none';
-        winStatement1();
-    });
-}
-
-function blueD2() {
-    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
-    document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
-    document.body.style.backgroundSize = "cover";
-    answerThree.style.display = 'none';
-    answerFour.style.display = 'none';
-    nextButton.addEventListener("click", function() {
-        addPoints(points.innerText, point);
-        document.body.style.backgroundImage = "url('images/delorean.jpeg')";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
-        nextButton.style.display = 'block';
-        answerThree.style.display = 'none';
-        answerFour.style.display = 'none';
-        winStatement1();
-    });
-}
-
-function winStatement1() {
-    question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
-    nextButton.addEventListener("click", function() {
-        winBlue();
-    });
-}
-
-
-var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFT'];
-var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
-
-function winBlue() {
-    if (point >= 400) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
-        nextButton.addEventListener("click", function() {
-            nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/bttF.jpeg')";
-            document.body.style.backgroundSize = "cover";
-            theEndtwo();
-        });
-
-    }
-    if (point < 400) {
-        console.log(point + "jj");
-        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
-        nextButton.addEventListener("click", function() {
-            nextButton.innerText = 'START OVER';
-            document.body.style.backgroundImage = "url('images/bttF.jpeg')";
-            document.body.style.backgroundSize = "cover";
-            theEndtwo();
-        });
-    }
-}
-
-function theEndtwo() {
-    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
-    nextButton.addEventListener("click", function() {
-        location.reload();
-    });
+    document.body.style.backgroundImage = "url('images/barn.jpeg')";
+    nextButton();
 }
