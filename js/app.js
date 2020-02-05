@@ -739,6 +739,7 @@ function redD() { //ANSWER CHOOSE A - ARRAY 3
         nextButton.style.display = 'block';
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
+        scoreBoard.style.display = "none";
         winStatement();
     });
 }
@@ -758,6 +759,7 @@ function redD2() { //ANSWER CHOOSE B - ARRAY 3
         nextButton.style.display = 'block';
         answerOne.style.display = 'none';
         answerTwo.style.display = 'none';
+        scoreBoard.style.display = "none";
         winStatement();
     });
 }
@@ -770,6 +772,7 @@ function redD2() { //ANSWER CHOOSE B - ARRAY 3
 function winStatement() {
     question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 gems to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
+        scoreBoard.style.display = "none";
         winRed();
     });
 }
@@ -948,6 +951,7 @@ function blueD() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
+        scoreBoard.style.display = "none";
         winStatement2();
     });
 }
@@ -966,6 +970,7 @@ function blueD2() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
+        scoreBoard.style.display = "none";
         winStatement2();
     });
 }
@@ -978,6 +983,7 @@ function blueD2() {
 function winStatement2() {
     question.innerText = player + ", you finally make it to the Delorean, and you have to have at least 400 gems to buy plutonium to make it back home. Thank you for fixing these scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
+        scoreBoard.style.display = "none";
         winBlue();
     });
 }
