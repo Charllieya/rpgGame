@@ -461,7 +461,7 @@ function red() {
     let questions = [player + ", the phonebooth takes you to Joel Goodsen's house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dad's stereo, so he can dance around in the living room. What song do you choose?",
         'You exit the phonebooth and you see Ren McCormack trying to teach Willard Hewitt how to dance for their senior prom. They stop you and ask you what song should they play to keep Willard on beat. Do you choose:',
         'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run, from Run DMC and his brother Russell Walker. You overhear Russell arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
-        'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
+        'After eating your burger, ' + player + ' you are about to head to the phonebooth, when you see Baby and Johnny practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
         // player + ', you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
     ];
 
@@ -779,7 +779,7 @@ function winRed() {
     var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
     var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
     if (point >= 300) {
-        question.innerText = "Your score is  " + point + ". Congratulations, you recieve the reward:  " + boothRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations you have enough gems to make it back home, you recieve the reward:  " + boothRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -987,7 +987,7 @@ function winBlue() {
     var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
     var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
     if (point >= 400) {
-        question.innerText = "Your score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations get have enough gems to buy plutonium and, you recieve the reward: " + carRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
