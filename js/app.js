@@ -98,6 +98,9 @@ function playerNameCheck() {
     }
 }
 
+/******************************************************************************************************************************************************************* */
+//                                                        /** INTRO SCENES (ATTIC SCENES)*/
+/******************************************************************************************************************************************************************* */
 function introScene() {
     introBox.style.display = "block";
     header.innerText = ' ';
@@ -139,8 +142,10 @@ function introChoice() {
         scene3();
     });
 }
+/******************************************************************************************************************************************************************* */
+//                                                        /** INTRO SCENES (ATTIC SCENES) */
+/******************************************************************************************************************************************************************* */
 
-/******************************************************************************************************************************************************************/
 function scene3() {
 
     // var back = document.getElementById('back');
@@ -151,6 +156,7 @@ function scene3() {
 
     //CREATING THE RED AND BLUE PILL BUTTONS
 
+    /** CREATE PHONEBOOTH BUTTON */
     // 1. Create RED button
     var red = document.createElement("button");
     red.innerHTML = "PHOTOBOOTH";
@@ -170,6 +176,7 @@ function scene3() {
         redPill();
     });
 
+    /**CREATE DOLOREAN BUTTON */
     // 1. Create BLUE button
     var blue = document.createElement("button");
     blue.innerHTML = "DELOREAN";
@@ -189,9 +196,14 @@ function scene3() {
         bluePill();
     });
 }
-/************************************************************************************************************************************************************************ */
-//FUNCTIONS CREATED FOR EACH STORY. 
 
+/******************************************************************************************************************************************************************* */
+/*                                                     /**TEXTBOXES FOR PHONEBOOTH AND DOLOREAN
+TEXTBOX, ANSWER CHOICE BOXES AND NEXT BUTTON ARE USED.
+FUNCTIONS START THE STORIES, WHICH ARE IN ARRAY OF OBJECTS */
+/******************************************************************************************************************************************************************* */
+//CREATES TEXTBOX FOR PHONEBOOTH (RED BUTTON) STORY. CALLS THE RED FUNCTION FOR (ARRAY OF OBJECTS FOR PHONEBOOTH STORY).
+//FUNCTION TO START THE GAME FOR THE RED BUTTON
 function redPill() {
     scene.innerText = 'You have Choosen to take the phonebooth back to the 20th Century';
     console.log(player + "You have Choosen to take the DeLorean back to the 20th Century");
@@ -206,14 +218,14 @@ function redPill() {
     document.body.style.backgroundImage = "url('images/den.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
-    // document.body.style.backgroundPosition = "fixed";
     answerThree.style.display = 'none';
     answerFour.style.display = 'none';
     red();
     // textboxVariables();
 }
 
-//FUNCTION TO START THE GAME FOR THE BLUE PILL
+//CREATES TEXTBOX FOR PHONEBOOTH (RED BUTTON) STORY. CALLS THE RED FUNCTION FOR (ARRAY OF OBJECTS FOR PHONEBOOTH STORY).
+//FUNCTION TO START THE GAME FOR THE BLUE BUTTON
 function bluePill() {
     scene.innerText = 'You have Choosen to take the DeLorean back to the 20th Century';
     console.log(player + " You have Choosen to take the DeLorean back to the 20th Century");
@@ -510,8 +522,8 @@ function red() {
 function blue() {
     scene.innerText = '';
     let questions = ["The Delorean takes you back to Sherman High School (1984). Five students are serving Saturday's Detention. John Bender, the criminal, wants you to help him close the door. What do you do? ",
-        "The next stop the Delorean takes you is to Ferris Bueller's house. He decides to sick school for the day and his girlfriend Sloane and best friend Cameron are coming too. He wants to surprise them and make them smile. Where should he take them? ",
-        player + ' you are riding in the Delorean and you see the Ghostbuster close by. You hear "If there is something weird and it dont look good. Who you gonna call? "',
+        "The next stop the Delorean takes you is to Ferris Bueller's house. He decides to skip school for the day and his girlfriend Sloane and best friend Cameron are coming too. He wants to surprise them and do something exciting. Where should he take them? ",
+        player + ' you are riding in the Delorean and you see a group of people close by. You hear "If there is something weird and it dont look good. Who you gonna call? "',
         "The last past the Delorean takes you is 1955, Hill Valley, CA (Yes, your last challenge is to help Marty McFly). Marty has just gotten his parents back together at the school dance, and to celebrate he wants to play a song. What song should he choose? ",
         // 'BLUE SCENE QUESTION FIVE'
     ];
@@ -563,17 +575,6 @@ function blue() {
 }
 /*****************************************************************************************************************************************************************/
 
-// var answerOne = document.getElementById('answer1');
-// var answerTwo = document.getElementById('answer2');
-
-// function sleep(milliseconds) {
-//     const date = Date.now();
-//     let currentDate = null;
-//     do {
-//         currentDate = Date.now();
-//     } while (currentDate - date < milliseconds);
-// }
-
 function addPoints(currentPoints, endPoints) {
     // If you're adding numbers to the current points..
     if (endPoints > currentPoints) {
@@ -594,7 +595,14 @@ function addPoints(currentPoints, endPoints) {
     }
 }
 
-function redA() {
+
+/******************************************************************************************************************************************************************* */
+//                                                        START OF PHONEBOOTH ANSWERS
+/******************************************************************************************************************************************************************* */
+/******************************************************************************************************************************************************************* */
+//                                                        /** RISKY BUSINESS ANSWERS */
+/******************************************************************************************************************************************************************* */
+function redA() { //ANSWER CHOOSE A - ARRAY 0
     question.innerText = 'Joel loves your choice in music. He runs into the living with his shirt on and starts dancing, and this makes you extremely uncomfortable. You leave and reenter the phonebooth. You earn 20 gems for getting the song right. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
     document.body.style.backgroundPosition = "center";
@@ -614,7 +622,7 @@ function redA() {
     // answerOne.style.display = 'block';
 }
 
-function redA2() {
+function redA2() { //ANSWER CHOOSE B - ARRAY 0
     question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Joel.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. He tells you to leave. You lose 10 gems. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
     answerOne.style.display = 'none';
@@ -630,8 +638,13 @@ function redA2() {
         answerTwo.style.display = 'inline';
     });
 }
-
-function redB() {
+/******************************************************************************************************************************************************************* */
+//                                                        /** END OF RISKY BUSINESS ANSWERS */
+/******************************************************************************************************************************************************************* */
+/******************************************************************************************************************************************************************* */
+//                                                        /** FOOTLOOSE ANSWERS */
+/******************************************************************************************************************************************************************* */
+function redB() { //ANSWER CHOOSE A - ARRAY 1 
     question.innerText = ' Although we love Chaka Khan, the song is not as upbeat as Ren was hoping. Willard just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Ren, disappointed, tells you that you were no help. You lose 15 gems.';
     document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
@@ -647,7 +660,7 @@ function redB() {
     });
 }
 
-function redB2() {
+function redB2() { //ANSWER CHOOSE B - ARRAY 1
     question.innerText = ' Deniece Williams wins every time and the song has an amazing tempo that helps Ren teach Willard rhythm. Willard manages to stay on key the entire song. You just earned your 20 gems. ';
     document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
@@ -663,8 +676,13 @@ function redB2() {
         answerTwo.style.display = 'inline';
     });
 }
-
-function redC() {
+/******************************************************************************************************************************************************************* */
+//                                                        /** END OF FOOTLOOSE ANSWERS */
+/******************************************************************************************************************************************************************* */
+/******************************************************************************************************************************************************************* */
+//                                                        /** KRUSH GROOVE ANSWERS */
+/******************************************************************************************************************************************************************* */
+function redC() { //ANSWER CHOOSE A - ARRAY 2
     question.innerText = "Run looks at you and says, It's Tricky?? What's that? Russell looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 gems!.";
     document.body.style.backgroundImage = "url('images/openBar.jpeg')";
     document.body.style.backgroundPosition = "center";
@@ -683,7 +701,7 @@ function redC() {
     });
 }
 
-function redC2() {
+function redC2() { //ANSWER CHOOSE B - ARRAY 2
     question.innerText = "Russell and Run smile at one another. They really like your thinking. Run tells Russell he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Russell screams at Run and tell him he will not say that. They both walk away. You gain 15 gems.";
     document.body.style.backgroundImage = "url('images/openBar.jpeg')";
     document.body.style.backgroundPosition = "center";
@@ -701,8 +719,13 @@ function redC2() {
         answerTwo.style.display = 'inline';
     });
 }
-
-function redD() {
+/******************************************************************************************************************************************************************* */
+//                                                        /** END OF KRUSH GROOVE ANSWERS */
+/******************************************************************************************************************************************************************* */
+/******************************************************************************************************************************************************************* */
+//                                                        /** DIRTY DANCING ANSWERS */
+/******************************************************************************************************************************************************************* */
+function redD() { //ANSWER CHOOSE A - ARRAY 3 
     question.innerText = "You decide to pcik 'Hungry Eyes', and Baby doesnt think this is an appropriate song to dance to infront of her parents. Johnny gets upset because he will have to change the climax in the dance routine. You lose 15 gems.";
     document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
     document.body.style.backgroundPosition = "center";
@@ -721,8 +744,8 @@ function redD() {
     });
 }
 
-function redD2() {
-    question.innerText = player + ", you '(I've had) the Time of my Life' and this makes Johnny and Baby both excited. Baby cannot wait to surprised her family at the last big dance of the summer. Baby will not be in a corner this summer. You gain 25 gems. ";
+function redD2() { //ANSWER CHOOSE B - ARRAY 3
+    question.innerText = player + ", you choose '(I've had) the Time of my Life' and this makes Johnny and Baby both excited. Baby cannot wait to surprised her family at the last big dance of the summer. Baby will not be in a corner this summer. You gain 25 gems. ";
     document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
@@ -739,16 +762,20 @@ function redD2() {
         winStatement();
     });
 }
-
+/******************************************************************************************************************************************************************* */
+//                                                        /** END DIRTY DANCING ANSWERS */
+/******************************************************************************************************************************************************************* */
+/******************************************************************************************************************************************************************* */
+//                                                          WIN STATEMENT AND REWARD FOR PHONEBOOTH GAME
+/******************************************************************************************************************************************************************* */
 function winStatement() {
     question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 gems to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winRed();
     });
 }
-
-
-
+//IF STATEMENT TO DETERMINE IF PLAYER GETS TO GO HOME AND GAIN REWARDS OR LOSE.
+//ARRAY OF AWARDS. WILL RANDOMLY BE CHOOSEN. 
 function winRed() {
     var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
     var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
@@ -775,16 +802,27 @@ function winRed() {
         });
     }
 }
-
+//END STATMENT: THANK YOU FOR PLAYING MY GAME.
 function theEndone() {
     question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP/Trivia Game. Part TWO will be under way soon. Points and rewards start over, once game restarts."
     nextButton.addEventListener("click", function() {
         location.reload();
     });
 }
+/******************************************************************************************************************************************************************* */
+//                                                          END OF GAME FOR PHONEBOOTH SELECTION
+/******************************************************************************************************************************************************************* */
 
-/********************************************************************************************************************************************************************** */
 
+
+
+
+/******************************************************************************************************************************************************************* */
+//                                                          /* BLUE = DOLEREAN ANSWER SCENARIOS */
+/********************************************************************************************************************************************************************/
+/******************************************************************************************************************************************************************* */
+//                                                          /* THE BREAKFAST CLUB ANSWERS */
+/********************************************************************************************************************************************************************/
 function blueA() {
     question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 points';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
@@ -816,7 +854,12 @@ function blueA2() {
         answerFour.style.display = 'inline';
     });
 }
-
+/******************************************************************************************************************************************************************* */
+//                                                          /* END THE BREAKFAST CLUB ANSWERS */
+/********************************************************************************************************************************************************************/
+/******************************************************************************************************************************************************************* */
+//                                                          /* FERRIS BUELLER ANSWERS */
+/********************************************************************************************************************************************************************/
 function blueB() {
     question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 25 points';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
@@ -849,7 +892,12 @@ function blueB2() {
         answerFour.style.display = 'inline';
     });
 }
-
+/******************************************************************************************************************************************************************* */
+//                                                          /* END OF FERRIS BUELLER ANSWERS */
+/********************************************************************************************************************************************************************/
+/******************************************************************************************************************************************************************* */
+//                                                          /* GHOSTBUSTER ANSWERS */
+/********************************************************************************************************************************************************************/
 function blueC() {
     question.innerText = "You chose Beetlejuice and even though you do have to call his name to summon him, you have to do it three times. Besides, I don't think we need that hassle " + player + ". You lose 10 points";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
@@ -881,7 +929,12 @@ function blueC2() {
         answerFour.style.display = 'inline';
     });
 }
-
+/******************************************************************************************************************************************************************* */
+//                                                          /* END OF GHOSTBUSTER ANSWERS */
+/********************************************************************************************************************************************************************/
+/******************************************************************************************************************************************************************* */
+//                                                          /* BACK TO THE FUTURE ANSWERS ANSWERS */
+/********************************************************************************************************************************************************************/
 function blueD() {
     question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 25 points.";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
@@ -896,7 +949,7 @@ function blueD() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
-        winStatement1();
+        winStatement2();
     });
 }
 
@@ -914,22 +967,26 @@ function blueD2() {
         nextButton.style.display = 'block';
         answerThree.style.display = 'none';
         answerFour.style.display = 'none';
-        winStatement1();
+        winStatement2();
     });
 }
-
-function winStatement1() {
-    question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 gems to buy plutonium to make it back home. Thank you for fixing these scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+/******************************************************************************************************************************************************************* */
+//                                                          /* END OF BACK TO FUTURE ANSWERS */
+/********************************************************************************************************************************************************************/
+/******************************************************************************************************************************************************************* */
+//                                                         WIN STATEMENT AND REWARD FOR PHONEBOOTH GAME
+/******************************************************************************************************************************************************************* */
+function winStatement2() {
+    question.innerText = player + ", you finally make it to the Delorean, and you have to have at least 400 gems to buy plutonium to make it back home. Thank you for fixing these scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winBlue();
     });
 }
-
-
-var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
-var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
-
+//IF STATEMENT TO DETERMINE IF PLAYER GETS TO GO HOME AND GAIN REWARDS OR LOSE.
+//ARRAY OF AWARDS. WILL RANDOMLY BE CHOOSEN.
 function winBlue() {
+    var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
+    var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
     if (point >= 400) {
         question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
         nextButton.addEventListener("click", function() {
@@ -951,10 +1008,13 @@ function winBlue() {
         });
     }
 }
-
+//END STATMENT: THANK YOU FOR PLAYING MY GAME.
 function theEndtwo() {
-    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
+    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP/Trivia Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
     nextButton.addEventListener("click", function() {
         location.reload();
     });
 }
+/******************************************************************************************************************************************************************* */
+//                                                        // END OF GAME FUNCTIONS FOR DOLEREAN
+/******************************************************************************************************************************************************************* */
