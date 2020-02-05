@@ -376,7 +376,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 1) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 25;
+                point += 40;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueB();
@@ -394,7 +394,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 3) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 25;
+                point += 30;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueD();
@@ -412,7 +412,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 0) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point -= 10;
+                point -= 5;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueA2();
@@ -430,7 +430,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 2) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 25;
+                point += 45;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueC2();
@@ -439,7 +439,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 3) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point -= 15;
+                point -= 10;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueD2();
@@ -780,7 +780,7 @@ function winRed() {
     var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
     var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
     if (point >= 300) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward:  " + boothRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations, you recieve the reward:  " + boothRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -840,7 +840,7 @@ function blueA() {
 }
 
 function blueA2() {
-    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 10 points';
+    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 5 points';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -861,7 +861,7 @@ function blueA2() {
 //                                                          /* FERRIS BUELLER ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueB() {
-    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 25 points';
+    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 40 points';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -915,7 +915,7 @@ function blueC() {
 }
 
 function blueC2() {
-    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 25 points ";
+    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 30 points ";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -936,7 +936,7 @@ function blueC2() {
 //                                                          /* BACK TO THE FUTURE ANSWERS ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueD() {
-    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 25 points.";
+    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 45 points.";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -954,7 +954,7 @@ function blueD() {
 }
 
 function blueD2() {
-    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 15 points. ";
+    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -988,7 +988,7 @@ function winBlue() {
     var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
     var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
     if (point >= 400) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations, you recieve the reward: " + carRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
