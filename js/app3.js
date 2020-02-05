@@ -130,7 +130,7 @@ function introScene3() {
 function introChoice() {
     introBox.style.display = "block";
     header.innerText = ' ';
-    intro.innerText = player + ', you are granted the option to travel in two different time machines. A phonebooth, and the DoLorean. How will you travel? ';
+    intro.innerText = player + ', you are granted the option to travel in two different time machines. A PHONEBOOTH (you must gain 300), and the DOLOREAN(you must gain 400 gems). How will you travel? ';
     proceedButton.addEventListener("click", function() {
         document.body.style.backgroundImage = "url('images/twoDoor.jpg')";
         // document.body.style.backgroundPosition = "center";
