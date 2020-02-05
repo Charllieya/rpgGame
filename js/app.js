@@ -876,7 +876,7 @@ function blueB() {
 }
 
 function blueB2() {
-    question.innerText = 'Unfortunately ' + player + ', Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 gems';
+    question.innerText = 'Unfortunately ' + player + ', Ferris only wants to take the DAY off, not the weekend. Plus, the Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 gems';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
