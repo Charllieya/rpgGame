@@ -782,7 +782,7 @@ function winRed() {
     var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
     var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
     if (point >= 300) {
-        question.innerText = "Your score is  " + point + ". Congratulations you have enough gems to make it back home, you recieve the reward:  " + boothRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations! You have enough gems to make it back home, and you recieved the reward:  " + boothRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -993,7 +993,7 @@ function winBlue() {
     var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
     var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
     if (point >= 400) {
-        question.innerText = "Your score is  " + point + ". Congratulations get have enough gems to buy plutonium and, you recieve the reward: " + carRewards;
+        question.innerText = "Your score is  " + point + ". Congratulations! You have enough gems to buy plutonium and, you recieve the reward: " + carRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
