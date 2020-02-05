@@ -105,26 +105,25 @@ function introScene() {
     introBox.style.display = "block";
     header.innerText = ' ';
     document.body.style.backgroundImage = "url('images/attic.jpg')";
-    intro.innerText = 'Hello ' + player + '. The year is 2020 and you have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "Let The Good Times Roll: 80s Decade". It also has in large writing: IMPORTANT!! DO NOT OPEN UNTIL 2025. " '
+    intro.innerText = 'Hello ' + player + '. The year is 2020 and you have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "Let The Good Times Roll: 80s Decade". It also has in large writing: IMPORTANT!! DO NOT OPEN UNTIL 2025. Curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. " '
     proceedButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url('images/darkRoom.jpeg')";
+        document.body.style.backgroundSize = "cover";
         introScene2();
     });
 }
 
 function introScene2() {
     introBox.style.display = "block";
-    intro.innerText = player + ', curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. A voice tells you that because you open the time capsule too early, you accidently altered time in that decade. In order to get back to the present time, you are asked to help fixed scenarios from the 1980s. '
+    intro.innerText = player + ', a voice tells you that because you open the time capsule too early, you accidently altered time in that decade. In order to get back to the present time, you are asked to help fixed scenarios from the 1980s. '
     proceedButton.addEventListener("click", function() {
-        document.body.style.backgroundImage = "url('images/darkRoom.jpeg')";
-        // document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundSize = "cover";
         introScene3();
     });
 }
 
 function introScene3() {
     introBox.style.display = "block";
-    intro.innerText = 'The voice tells you that you have to collect a certain number of gems. If you succeed, you will be rewarded a life changing gift, in addition to returning home. If you do not, you will be stucked in the decade for the next year!" '
+    intro.innerText = 'The voice tells you that you have to collect a certain number of gems. If you succeed, you will be rewarded dream gift, in addition to returning home. If you do not, you will be stucked in the decade for the next year!" '
     proceedButton.addEventListener("click", function() {
         introChoice();
     });
@@ -133,7 +132,7 @@ function introScene3() {
 function introChoice() {
     introBox.style.display = "block";
     header.innerText = ' ';
-    intro.innerText = player + ', you are granted the option to travel in two different time machines. A PHONEBOOTH (you must gain 300), and the DOLOREAN(you must gain 400 gems). How will you travel? ';
+    intro.innerText = player + ', you are granted the option to travel in two different time machines. A PHONEBOOTH (you must gain 300 gems), and the DOLOREAN(you must gain 400 gems). How will you travel? ';
     proceedButton.addEventListener("click", function() {
         document.body.style.backgroundImage = "url('images/twoDoor.jpg')";
         // document.body.style.backgroundPosition = "center";
@@ -430,7 +429,7 @@ function textboxVariables(answers, question) {
         if (answerCount == 2) {
             console.log("Success!");
             if (!flagArray[answerCount])
-                point += 45;
+                point += 50;
             // Sets the first index to true after the points have been added, so the score doesn't get updated again.
             flagArray[answerCount] = true;
             blueC2();
@@ -824,7 +823,7 @@ function theEndone() {
 //                                                          /* THE BREAKFAST CLUB ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueA() {
-    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 points';
+    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 gems';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -840,7 +839,7 @@ function blueA() {
 }
 
 function blueA2() {
-    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 5 points';
+    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 5 gems';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -861,7 +860,7 @@ function blueA2() {
 //                                                          /* FERRIS BUELLER ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueB() {
-    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 40 points';
+    question.innerText = 'Ohhhh Yeahhhh! Ferris is excited about taking his friends to the parade. He plans own performing Danke Schoen and Twist and Shout. You gain 40 gems';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -877,7 +876,7 @@ function blueB() {
 }
 
 function blueB2() {
-    question.innerText = 'Unfortunately, ' + player + ' Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
+    question.innerText = 'Unfortunately, ' + player + ' Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 gems';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -899,7 +898,7 @@ function blueB2() {
 //                                                          /* GHOSTBUSTER ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueC() {
-    question.innerText = "You chose Beetlejuice and even though you do have to call his name to summon him, you have to do it three times. Besides, I don't think we need that hassle " + player + ". You lose 10 points";
+    question.innerText = "You chose Beetlejuice and even though you do have to call his name to summon him, you have to do it three times. Besides, I don't think we need that hassle " + player + ". You lose 10 gems";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -915,7 +914,7 @@ function blueC() {
 }
 
 function blueC2() {
-    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 30 points ";
+    question.innerText = "You chose Ghostbusters and the actual Ghostbusters fight 'The Stay Puft Marshmallow Man' and defeat the paranomarl monster. You gain 30 gems ";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -936,7 +935,7 @@ function blueC2() {
 //                                                          /* BACK TO THE FUTURE ANSWERS ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueD() {
-    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 45 points.";
+    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 50 gems.";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -954,7 +953,7 @@ function blueD() {
 }
 
 function blueD2() {
-    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 points. ";
+    question.innerText = "You choose Back in Time by Huey Lewis and the News. You know that you are in 1955, right? They havent been discovered yet. You lost 10 gems. ";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
