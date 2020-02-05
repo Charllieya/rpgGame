@@ -113,7 +113,7 @@ function introScene() {
 
 function introScene2() {
     introBox.style.display = "block";
-    intro.innerText = player + ', curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. A voice tells you that because you open the time capsule to early, you accidently altered time in that decade. In order to get back to the present time, you are asked to help fixed scenarios from the 1980s. '
+    intro.innerText = player + ', curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. A voice tells you that because you open the time capsule too early, you accidently altered time in that decade. In order to get back to the present time, you are asked to help fixed scenarios from the 1980s. '
     proceedButton.addEventListener("click", function() {
         document.body.style.backgroundImage = "url('images/darkRoom.jpeg')";
         // document.body.style.backgroundPosition = "center";
