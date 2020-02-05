@@ -524,7 +524,7 @@ function blue() {
     let questions = ["The Delorean takes you back to Sherman High School (1984). Five students are serving Saturday's Detention. John Bender, the criminal, wants you to help him close the door. What do you do? ",
         "The next stop the Delorean takes you is to Ferris Bueller's house. He decides to skip school for the day and his girlfriend Sloane and best friend Cameron are coming too. He wants to surprise them and do something exciting. Where should he take them? ",
         player + ' you are riding in the Delorean and you see a group of people close by. You hear "If there is something weird and it dont look good. Who you gonna call? "',
-        "The last past the Delorean takes you is 1955, Hill Valley, CA (Yes, your last challenge is to help Marty McFly). Marty has just gotten his parents back together at the school dance, and to celebrate he wants to play a song. What song should he choose? ",
+        "The last place the Delorean takes you is 1955, Hill Valley, CA (Yes, your last challenge is to help Marty McFly). Marty has just gotten his parents back together at the school dance, and to celebrate he wants to play a song. What song should he choose? ",
         // 'BLUE SCENE QUESTION FIVE'
     ];
 
