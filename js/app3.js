@@ -102,7 +102,7 @@ function introScene() {
     introBox.style.display = "block";
     header.innerText = ' ';
     document.body.style.backgroundImage = "url('images/attic.jpg')";
-    intro.innerText = 'Hello ' + player + '. You have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "The BEST of the 80s." '
+    intro.innerText = 'Hello ' + player + '. The year is 2020 and you have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "Let The Good Times Roll: 80s Decade". It also has in large writing: IMPORTANT!! DO NOT OPEN UNTIL 2025. " '
     proceedButton.addEventListener("click", function() {
         introScene2();
     });
@@ -110,7 +110,18 @@ function introScene() {
 
 function introScene2() {
     introBox.style.display = "block";
-    intro.innerText = 'As you open the time capsule, you are zapped into a dark room. A voice speaks: "You have awaken me. As your punishment, you must travel back in time and correct problems. In order to get back to the present time. You must collect 300 gems. If you collect 350 gems, I will reward you with a gift, as well as let you come home. If you do not, you will be stucked in the past for 20 years."  '
+    intro.innerText = player + ', curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. A voice tells you that because you open the time capsule to early, you accidently altered time in that decade. In order to get back to the present time, you are asked to help fixed scenarios from the 1980s. '
+    proceedButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url('images/darkRoom.jpeg')";
+        // document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
+        introScene3();
+    });
+}
+
+function introScene3() {
+    introBox.style.display = "block";
+    intro.innerText = 'The voice tells you that you have to collect a certain number of gems. If you succeed, you will be rewarded a life changing gift, in addition to returning home. If you do not, you will be stucked in the decade for the next year!" '
     proceedButton.addEventListener("click", function() {
         introChoice();
     });
@@ -121,6 +132,9 @@ function introChoice() {
     header.innerText = ' ';
     intro.innerText = player + ', you are granted the option to travel in two different time machines. A phonebooth, and the DoLorean. How will you travel? ';
     proceedButton.addEventListener("click", function() {
+        document.body.style.backgroundImage = "url('images/twoDoor.jpg')";
+        // document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundSize = "cover";
         introBox.style.display = "none";
         scene3();
     });
@@ -434,8 +448,8 @@ function red() {
     scene.innerText = '';
     // An array of all the questions.
     let questions = [player + ', the phonebooth takes you to Joel Goodsen house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dads stero, so he can dance around in the living room. What song do you choose?',
-        'As you are walking home, you see Kevin Bacon trying to teach Chris Penn how to Dance for their senior prom. They stop you and ask you what song should they play to keep Chris on beat. Do you choose:',
-        'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run DMC. You overhear Blair Underwood arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
+        'You exit the phonebooth and you see Ren McCormack trying to teach Willard Hewitt how to dance for their senior prom. They stop you and ask you what song should they play to keep Willard on beat. Do you choose:',
+        'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run, from Run DMC and his brother Russell Walker. You overhear Russell arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
         // player + ', you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. After helping some people on your journey, you can calculate your points to see if you are able to go home and gain the reward.  '
     ];
@@ -581,7 +595,7 @@ function addPoints(currentPoints, endPoints) {
 }
 
 function redA() {
-    question.innerText = 'Tom loves your choice in music. He runs into the living with his undies on and starts dancing, and this makes you extremely uncomfortable. You decide to go home. You earn 20 points for getting the song right. ';
+    question.innerText = 'Joel loves your choice in music. He runs into the living with his shirt on and starts dancing, and this makes you extremely uncomfortable. You leave and reenter the phonebooth. You earn 20 gems for getting the song right. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -601,7 +615,7 @@ function redA() {
 }
 
 function redA2() {
-    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Tom.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. You lose 10 points. ';
+    question.innerText = 'You decide to play Back in Black by AC/DC and this frustrates Joel.  He tells you that he had a surprise for you but didn’t think the music was a perfect fit. He tells you to leave. You lose 10 gems. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -618,7 +632,7 @@ function redA2() {
 }
 
 function redB() {
-    question.innerText = ' We all love a good Chaka vibe, but this wasn’t one of those times. Chris just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Kevin, disappointed, tells you that you were no help. You lose 15 points.';
+    question.innerText = ' Although we love Chaka Khan, the song is not as upbeat as Ren was hoping. Willard just can’t see to get his right feet in motion with his left. He becomes embarrassed and walks away. Ren, disappointed, tells you that you were no help. You lose 15 gems.';
     document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -634,7 +648,7 @@ function redB() {
 }
 
 function redB2() {
-    question.innerText = ' Deniece Williams wins every time and we are definitely cheering this boy on. Chris manages to stay on key the entire song. You just earned your  20 points. ';
+    question.innerText = ' Deniece Williams wins every time and the song has an amazing tempo that helps Ren teach Willard rhythm. Willard manages to stay on key the entire song. You just earned your 20 gems. ';
     document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
@@ -651,7 +665,7 @@ function redB2() {
 }
 
 function redC() {
-    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Blair looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 points!.";
+    question.innerText = "Run looks at you and says, It's Tricky?? What's that? Russell looks at Run and say, 'Well, that sounds like a good name for the next single. You lose 10 gems!.";
     document.body.style.backgroundImage = "url('images/openBar.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -670,7 +684,7 @@ function redC() {
 }
 
 function redC2() {
-    question.innerText = "Blair and Run smile at one another. They really like your thinking. Run tells Blair he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Blair screams at Run and tell him he will not say that. They both walk away. you get 15 points.";
+    question.innerText = "Russell and Run smile at one another. They really like your thinking. Run tells Russell he'll let the rest of the band know and he's excited to be performing in 'RUN'S HOUSE'. Russell screams at Run and tell him he will not say that. They both walk away. You gain 15 gems.";
     document.body.style.backgroundImage = "url('images/openBar.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -689,7 +703,7 @@ function redC2() {
 }
 
 function redD() {
-    question.innerText = "You decide to choose Hungry Eyes, and Jennifer doesnt think this is an appropriate song to dance to infront of her parents. Patrick gets upset because he will have to change the climax routine. You lose 15 points.";
+    question.innerText = "You decide to pcik 'Hungry Eyes', and Baby doesnt think this is an appropriate song to dance to infront of her parents. Johnny gets upset because he will have to change the climax in the dance routine. You lose 15 gems.";
     document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -708,7 +722,7 @@ function redD() {
 }
 
 function redD2() {
-    question.innerText = "You choose '(I've had) the time of my life Patrick and Jennifer both are excited. Patrick can wait to lift Jennifer off her feet. You gain 25 points. ";
+    question.innerText = player + ", you '(I've had) the Time of my Life' and this makes Johnny and Baby both excited. Baby cannot wait to surprised her family at the last big dance of the summer. Baby will not be in a corner this summer. You gain 25 gems. ";
     document.body.style.backgroundImage = "url('images/ballroom.jpeg')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
@@ -727,7 +741,7 @@ function redD2() {
 }
 
 function winStatement() {
-    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+    question.innerText = player + ", you finally made it to the phonebooth , and you have to have at least 300 gems to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winRed();
     });
@@ -739,7 +753,7 @@ function winRed() {
     var phonebooth = ['WEALTH', 'IMMORTALITY', 'BILINGUAL', 'DREAM HOME', 'INVISIBILITY'];
     var boothRewards = phonebooth[Math.floor(Math.random() * phonebooth.length)];
     if (point >= 300) {
-        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward: " + boothRewards;
+        question.innerText = "You score is  " + point + ". Congratulations, you recieve the reward:  " + boothRewards;
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -751,7 +765,7 @@ function winRed() {
     }
     if (point < 300) {
         console.log(point + "jj");
-        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
+        question.innerText = player + " I regret to inform you that you only recieved " + point + " gems this time. That is not enough to take you back to the future. You do not recieve the reward and will not be able to go home."
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/billandted.jpeg')";
@@ -763,7 +777,7 @@ function winRed() {
 }
 
 function theEndone() {
-    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP Game. Part TWO will be under way soon. Points and rewards start over, once game starts over."
+    question.innerText = "Thank you for playing " + player + "! You have reached the end of my first RGP/Trivia Game. Part TWO will be under way soon. Points and rewards start over, once game restarts."
     nextButton.addEventListener("click", function() {
         location.reload();
     });
@@ -820,7 +834,7 @@ function blueB() {
 }
 
 function blueB2() {
-    question.innerText = 'Unfortunately, ' + player + 'Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
+    question.innerText = 'Unfortunately, ' + player + ' Ferris only wants to take the DAY off, not the weekend. The Dodgers Stadium is located in Los Angeles, not Chicago. You lost 10 points';
     document.body.style.backgroundImage = "url('images/ferrisandfriends.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -837,7 +851,7 @@ function blueB2() {
 }
 
 function blueC() {
-    question.innerText = "You chose Beetlejuice and even though you dont have to call him to summon him, you have to do it three times. I don't think we need that hassle " + player + ". You lose 10 points";
+    question.innerText = "You chose Beetlejuice and even though you do have to call his name to summon him, you have to do it three times. Besides, I don't think we need that hassle " + player + ". You lose 10 points";
     document.body.style.backgroundImage = "url('images/ghostbuster.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -905,14 +919,14 @@ function blueD2() {
 }
 
 function winStatement1() {
-    question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 points to make it back home. Thank you for fixing these  scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
+    question.innerText = player + ", you finally make it to the Delorean , and you have to have at least 400 gems to buy plutonium to make it back home. Thank you for fixing these scenarios on your journey. Click 'NEXT' to see your points to see if you are able to go home and gain the reward. "
     nextButton.addEventListener("click", function() {
         winBlue();
     });
 }
 
 
-var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFT'];
+var delorean = ['PREDICT FUTURE', 'TELEKINESIS', 'ABILITY TO FLY', 'SUPER HUMAN STRENGTH', 'SHAPESHIFTING'];
 var carRewards = delorean[Math.floor(Math.random() * delorean.length)];
 
 function winBlue() {
@@ -928,7 +942,7 @@ function winBlue() {
     }
     if (point < 400) {
         console.log(point + "jj");
-        question.innerText = player + " I regret to inform you that you on gain " + point + " points this time. You cannot recieve the reward and will not be able to go home."
+        question.innerText = player + " I regret to inform you that you on gain " + point + " gems this time. That's not enough to buy plutonium to get back home. You do not recieve the reward and will not be able to go home this time around."
         nextButton.addEventListener("click", function() {
             nextButton.innerText = 'START OVER';
             document.body.style.backgroundImage = "url('images/bttF.jpeg')";
