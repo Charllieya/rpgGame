@@ -42,6 +42,18 @@
      background-color: #32120E;
  }
  
+ .points {
+     margin-top: 6px;
+     font-size: 28px;
+ }
+ 
+ .gemBox {
+     border: 1px solid white;
+     margin-left: 550px;
+     width: 99px;
+     height: 48px;
+ }
+ 
  .header {
      margin-top: 40px;
      /* background-color: #EC9B4E; */
@@ -155,7 +167,7 @@
  .score {
      margin-top: -45px;
      width: 100%;
-     background: rgb(72, 72, 72);
+     background: rgb(8, 12, 121);
      border: 1px solid purple;
      color: #fff;
      height: 50px;
@@ -254,6 +266,9 @@
      #start {
          margin-top: -32px;
          margin-left: 300px;
+     }
+     .gemBox {
+         margin-left: 151px;
      }
      .nextBox {
          margin-top: -15px;
