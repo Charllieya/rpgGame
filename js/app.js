@@ -935,7 +935,7 @@ function blueC2() {
 //                                                          /* BACK TO THE FUTURE ANSWERS ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueD() {
-    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parent's are extremely happy. You gain 50 gems.";
+    question.innerText = "You choose Johnny B Goode and everyone at the dance goes wild. Marty's parents are extremely happy. You gain 50 gems.";
     document.body.style.backgroundImage = "url('images/michaelJ.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
