@@ -533,8 +533,8 @@ function blue() {
     answers = [
         // Index 0 of the array. Contains the first set of answer choices.
         {
-            answerThree: 'You help Bender out.',
-            answerFour: 'You dont help Bender.'
+            answerThree: 'You dont help Bender.',
+            answerFour: 'You choose to help Bender.'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
@@ -823,7 +823,7 @@ function theEndone() {
 //                                                          /* THE BREAKFAST CLUB ANSWERS */
 /********************************************************************************************************************************************************************/
 function blueA() {
-    question.innerText = 'You choose to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 gems';
+    question.innerText = 'You choose not to help Bender close the library door. Vernon, the principal, does not come in. You gain 30 gems';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';
@@ -839,7 +839,7 @@ function blueA() {
 }
 
 function blueA2() {
-    question.innerText = 'Bender is upset that you wouldnt help and he gets Andrew to help him. They are loud and Vernon comes in and they get caught. You lose 5 gems';
+    question.innerText = 'You choose to help Bender close the door. You both are very loud and Vernon comes in and you both get caught. You lose 5 gems';
     document.body.style.backgroundImage = "url('images/library.jpeg')";
     document.body.style.backgroundSize = "cover";
     answerThree.style.display = 'none';

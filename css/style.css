@@ -223,6 +223,9 @@
          width: 267px;
          height: auto;
      }
+     .gemBox {
+         margin-left: 525px;
+     }
      .question {
          text-align: center;
          border-radius: 0px;
