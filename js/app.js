@@ -478,7 +478,7 @@ function red() {
         // Index 1 of the array. Contains the second set of answer choices.
         {
             answerOne: "Ain’t Nobody.",
-            answerTwo: 'Let’s hear it for the Boy'
+            answerTwo: 'Let’s Hear It for the Boy'
         },
         // Index 2 of the array. Contains the third set of answer choices.
         {
