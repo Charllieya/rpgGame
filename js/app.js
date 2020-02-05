@@ -458,7 +458,7 @@ function textboxVariables(answers, question) {
 function red() {
     scene.innerText = '';
     // An array of all the questions.
-    let questions = [player + ', the phonebooth takes you to Joel Goodsen house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dads stero, so he can dance around in the living room. What song do you choose?',
+    let questions = [player + ", the phonebooth takes you to Joel Goodsen's house. His parents have left for vacation and he has the house to himself for a few days. He wants you to play a song on his dad's stereo, so he can dance around in the living room. What song do you choose?",
         'You exit the phonebooth and you see Ren McCormack trying to teach Willard Hewitt how to dance for their senior prom. They stop you and ask you what song should they play to keep Willard on beat. Do you choose:',
         'You have gotten hungry. You stop at Krush Groovin bar and grill to grab a burger. Inside you meet Run, from Run DMC and his brother Russell Walker. You overhear Russell arguing with Run over what song they should perform at the showcase. You decide to come and help. Which song do you think would be best to perform? ',
         'After eating your burger, ' + player + ' you are about to head to the teleporter, when you see Jennifer Gray and Patrick Swayze practing for the end of the season talent show. They are looking for the perfect song to dance to. They ask you to choose out of these two selections. What do you choose? ',
@@ -473,11 +473,11 @@ function red() {
         // Index 0 of the array. Contains the first set of answer choices.
         {
             answerOne: 'Old Time Rock and Roll',
-            answerTwo: 'Back in black.'
+            answerTwo: 'Back in Black.'
         },
         // Index 1 of the array. Contains the second set of answer choices.
         {
-            answerOne: 'Ain’t nobody.',
+            answerOne: "Ain’t Nobody.",
             answerTwo: 'Let’s hear it for the Boy'
         },
         // Index 2 of the array. Contains the third set of answer choices.
@@ -602,7 +602,7 @@ function addPoints(currentPoints, endPoints) {
 //                                                        /** RISKY BUSINESS ANSWERS */
 /******************************************************************************************************************************************************************* */
 function redA() { //ANSWER CHOOSE A - ARRAY 0
-    question.innerText = 'Joel loves your choice in music. He runs into the living with his shirt on and starts dancing, and this makes you extremely uncomfortable. You leave and reenter the phonebooth. You earn 20 gems for getting the song right. ';
+    question.innerText = 'Joel loves your choice in music. He runs into the living in his shirt and underwear and starts dancing, and this makes you extremely uncomfortable. You leave and reenter the phonebooth. You earn 20 gems for getting the song right. ';
     document.body.style.backgroundImage = "url('images/living.jpeg')";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundSize = "cover";
@@ -660,7 +660,7 @@ function redB() { //ANSWER CHOOSE A - ARRAY 1
 }
 
 function redB2() { //ANSWER CHOOSE B - ARRAY 1
-    question.innerText = ' Deniece Williams wins every time and the song has an amazing tempo that helps Ren teach Willard rhythm. Willard manages to stay on key the entire song. You just earned your 20 gems. ';
+    question.innerText = ' Deniece Williams wins every time and the song has an amazing tempo that helps Ren teach Willard some rhythm. Willard manages to stay on key the entire song. You just earned yourself 20 gems. ';
     document.body.style.backgroundImage = "url('images/footloose.jpg')";
     answerOne.style.display = 'none';
     answerTwo.style.display = 'none';
