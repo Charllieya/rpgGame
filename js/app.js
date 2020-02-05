@@ -105,7 +105,7 @@ function introScene() {
     introBox.style.display = "block";
     header.innerText = ' ';
     document.body.style.backgroundImage = "url('images/attic.jpg')";
-    intro.innerText = 'Hello ' + player + '. The year is 2020 and you have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "Let The Good Times Roll: 80s Decade". It also has in large writing: IMPORTANT!! DO NOT OPEN UNTIL 2025. Curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. " '
+    intro.innerText = 'Hello ' + player + '. The year is 2020 and you have just found a time capsule in your parents attic. On the front of the time capsule, you see the words "Let The Good Times Roll: 80s Decade". It also has in large writing: IMPORTANT!! DO NOT OPEN UNTIL 2025. Curiosity get the best of you, and you decide to open the time capsule. You are then ZAPPED into a dark room. '
     proceedButton.addEventListener("click", function() {
         document.body.style.backgroundImage = "url('images/darkRoom.jpeg')";
         document.body.style.backgroundSize = "cover";
