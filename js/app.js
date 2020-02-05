@@ -123,7 +123,7 @@ function introScene2() {
 
 function introScene3() {
     introBox.style.display = "block";
-    intro.innerText = 'The voice tells you that you have to collect a certain number of gems. If you succeed, you will be rewarded dream gift, in addition to returning home. If you do not, you will be stucked in the decade for the next year!" '
+    intro.innerText = 'The voice tells you that you have to collect a certain number of gems. If you succeed, you will be reward a gift, in addition to returning home. If you do not, you will be stucked in the decade for the next year!" '
     proceedButton.addEventListener("click", function() {
         introChoice();
     });
